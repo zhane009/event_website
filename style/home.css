@@ -1,0 +1,401 @@
+body {
+    background-color: #222;
+    font-family: 'Raleway', sans-serif;
+    font-size: large;
+    color: gainsboro;
+    /* margin: 0 10%; */
+}
+
+#controlPanel {
+    display: flex;
+    float: right;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 10px;
+}
+
+#controlPanel a{
+    padding: 5px 5px;
+}
+
+#controlPanel a:hover {
+    background-color: dodgerblue;
+}
+
+#darkBox{
+    /* background-color: white; */
+    color: #222;
+}
+
+#lightBox{
+    /* background-color: #222      ; */
+    color: gainsboro;
+}
+
+.incre{
+    font-size: larger;
+}
+
+.decre{
+    font-size: smaller;
+}
+
+.reset{
+    font-size:medium;
+}
+
+.navbar {
+    list-style-type: none;
+    /* margin: 0 10%; */
+    padding: 0;
+    overflow: hidden;
+    background-color: skyblue;
+    border-radius: 5px;
+}
+
+.navbar_btn img {
+    width: 1.5vh;
+    height: auto;
+}
+  
+.navbar_item {
+    float: left;
+}
+
+.navbar_item_right {
+    float: right;
+}
+  
+.navbar_btn{
+    width: auto;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 10px 1vw;
+    text-decoration: none;
+}
+ 
+.navbar_item_right .icon {
+    position: relative;
+    display: none;
+    color: black;
+    align-items: center;
+    border-radius: 0;
+    top: 0;
+    right: 0;
+}
+
+li a:hover {
+    background-color: dodgerblue;
+    color: black;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 1.5vh;
+    }
+
+    .navbar div li {display: none;}
+    .navbar_item_right .icon {
+        float: right;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .navbar.responsive {position: relative;}
+    .navbar.responsive .navbar_item_right .icon {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .navbar.responsive .navbar_item_right {
+        display: flex;
+        float: left;
+        flex-direction: column;
+        clear: both;
+    }
+    .navbar.responsive .navbar_item_right li:not(:last-child){
+        position: relative;
+        float: left;
+        display: block;
+    }
+
+    .navbar_btn {
+        text-align: left;
+    }
+}
+
+.container {
+    position: relative;
+    text-align: left;
+    color: gainsboro;
+}
+  
+.text-on-background{
+    width: 50%;
+    position: absolute;
+    top: 0;
+    left: 10%;
+    transform: translate(-15%, 25%);
+    font-size: 5vw;
+    color: skyblue;
+}
+
+.text-on-background p {
+    margin: 0;
+}
+
+@keyframes fadeInUp {
+    0% {
+      transform: translate(-15%, 100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translate(-15%, 25%);
+      opacity: 1;
+    }
+}
+  
+.fadeInUp-animation {
+    animation: 1.5s fadeInUp;
+}
+
+.background {
+    margin-top: 3vh;
+    width: 100%;
+    height: 50%;
+    opacity: 0.4;
+}
+
+.btn1, .btn2{
+    margin-top: 15px;
+    margin-left: 18%;
+    width : 50%;
+    border: 2px solid grey;
+    border-radius: 10px;
+    background-color: transparent;
+    color: skyblue;
+    padding: 20px 20px;
+    font-size: 2.5vh;
+    cursor: pointer;
+}
+
+.centered {
+    margin: auto;   
+}
+
+section {
+    text-align: center;
+}
+
+.btn1:hover {
+    border: 2px solid gold;
+    color: dodgerblue;
+}
+
+
+.btn2:hover {
+    color : dodgerblue;
+    border: 2px solid gold;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.btn2:hover, .btn2:focus, .btn2:active {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+}
+
+
+
+.desc {
+    background-color: skyblue;
+    color: #222;
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 3rem;
+}
+
+.desc img {
+    width: auto;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    /* backdrop-filter: blur(3px); */
+    color: #222;
+}
+
+.overlay .btn2 {
+    color: #222;
+    width: auto;
+    margin: 0;
+    margin-bottom: 5rem;
+}
+
+.event {
+    position: relative;
+    padding: 10px;
+}
+
+
+.overlay > * {
+    transform: translateY(50px);
+    transition: 0.5s ease;
+}
+
+.desc :hover > * {
+    transform: translateY(0);
+}
+
+.desc:hover .overlay{
+    background-color: skyblue;
+    opacity: 1;
+}
+
+footer {
+    width: auto;
+    margin: 5% 0; 
+    border-radius: 5px;
+    background-color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+    .text-on-background {
+        margin-top: 8%;
+        margin-left: 5%;
+        width: 90%;
+        /* display: flex;
+        flex-direction: row; */
+    }
+
+    .btn1, .btn2 {
+        /* width: 100%; */
+        padding: 10px 10px;
+        font-size: 1.5vh;
+    }
+
+    .desc img {
+        width: 100%;
+    }
+}
+
+footer h2 {
+    /* font-size: 3vh; */
+    font-weight: 400;
+    line-height: 3rem;
+}
+
+footer p a {
+    color: gainsboro;
+    /* font-size: 16px; */
+    text-decoration: none;
+}
+
+footer p {
+    float: left;
+    font-size: 1.8vh;
+    word-spacing: 2px;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    padding-inline-start: 0;
+}
+
+footer ul li {
+    padding: 3%;
+    margin-right: 7%;
+}
+
+footer p a:hover {
+    color: dodgerblue;
+}
+
+.copyright{
+    background: #222;
+    width: 98%;
+    padding: 20px;
+    text-align: center;
+}
+
+.copyright p{
+    float: left;
+    font-size: 1.8vh;
+    word-spacing: 2px;
+}
+
+ .copyright p a{
+   color: gainsboro;
+   font-size: 1.8vh;
+   text-decoration: none;
+}
+
+.copyright p a:hover{
+    color: tomato;
+}
+
+
+.fa {
+    /* padding: 20%; */
+    /* font-size: ; */
+    width: 4vh;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.fa-facebook {
+    padding: 20%;
+    background: transparent;
+    color: white;
+}
+
+.fa-twitter {
+    padding: 20%;
+    background: transparent;
+    color: white;
+}
+
+.fa-instagram {
+    padding: 20%;
+    background: transparent;
+    color: white;
+}
+
+.fa-youtube {
+    padding: 20%;
+    background: transparent;
+    color: white;
+}

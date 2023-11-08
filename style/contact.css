@@ -1,0 +1,257 @@
+body {
+    background-color: #222;
+    font-family: 'Raleway', sans-serif;
+    font-size: large;
+    color: gainsboro;
+    /* margin: 0 10%; */
+}
+
+.navbar {
+    list-style-type: none;
+    /* margin: 0 10%; */
+    padding: 0;
+    overflow: hidden;
+    background-color: skyblue;
+    border-radius: 5px;
+}
+
+.navbar_btn img {
+    width: 1.5vh;
+    height: auto;
+}
+  
+.navbar_item {
+    float: left;
+}
+
+.navbar_item_right {
+    float: right;
+}
+  
+.navbar_btn{
+    width: auto;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 10px 1vw;
+    text-decoration: none;
+}
+ 
+.navbar_item_right .icon {
+    position: relative;
+    display: none;
+    color: black;
+    align-items: center;
+    border-radius: 0;
+    top: 0;
+    right: 0;
+}
+
+li a:hover {
+    background-color: dodgerblue;
+    color: black;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 1.5vh;
+    }
+
+    .navbar div li {display: none;}
+    .navbar_item_right .icon {
+        float: right;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .navbar.responsive {position: relative;}
+    .navbar.responsive .navbar_item_right .icon {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .navbar.responsive .navbar_item_right {
+        display: flex;
+        float: left;
+        flex-direction: column;
+        clear: both;
+    }
+    .navbar.responsive .navbar_item_right li:not(:last-child){
+        position: relative;
+        float: left;
+        display: block;
+    }
+
+    .navbar_btn {
+        text-align: left;
+    }
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: gainsboro;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.content {
+    max-width: 500px;
+    margin: 10px auto;
+}
+
+.heading h3 {
+    text-align: center;
+}
+
+.control-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.centered {
+    justify-content: center;
+
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+    border: 1px solid blue;
+    background-color: aquamarine;
+    border-radius: 12px;
+    padding: 5px 10px;
+    margin: 10px 5px;;
+}
+
+.name-id{
+    display: flex;
+    flex-direction: column;
+    gap: 5px
+}
+
+
+
+label {
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: gainsboro;
+
+  min-width: 100px;
+}
+ 
+input {
+  background: gainsboro;
+  width: 100%;
+  border: 0;
+  border-radius: 4px;
+  padding: 12px 16px;
+  color: black;
+  font-size: 14px;
+}
+ 
+button {
+   min-width: 150px;
+   background: grey;
+   border: 0;
+   border-radius: 4px;
+   padding: 12px 16px;
+   color: white;
+   font-size: inherit;
+   font-weight: bold;
+   text-transform: uppercase;
+   cursor: pointer;
+}
+ 
+button:hover {
+  background-color: #c4c4c4;
+  color: #000; 
+}
+
+footer {
+    width: auto;
+    margin: 5% 0; 
+    border-radius: 5px;
+    background-color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+footer h2 {
+    /* font-size: 3vh; */
+    font-weight: 400;
+    line-height: 3rem;
+}
+
+footer p a {
+    color: gainsboro;
+    /* font-size: 16px; */
+    text-decoration: none;
+}
+
+footer p {
+    float: left;
+    font-size: 1.8vh;
+    word-spacing: 2px;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    padding-inline-start: 0;
+}
+
+footer ul li {
+    padding: 3%;
+    margin-right: 7%;
+}
+
+footer p a:hover {
+    color: dodgerblue;
+}
+
+.fa {
+    /* padding: 20%; */
+    /* font-size: ; */
+    width: 4vh;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.fa-facebook {
+    padding: 20%;
+    background: transparent;
+    color: white;
+}
+
+.fa-twitter {
+    padding: 20%;
+    background: transparent;
+    color: white;
+}
+
+.fa-instagram {
+    padding: 20%;
+    background: transparent;
+    color: white;
+}
+
+.fa-youtube {
+    padding: 20%;
+    background: transparent;
+    color: white;
+}

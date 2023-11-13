@@ -6,6 +6,11 @@ body {
     /* margin: 0 10%; */
 }
 
+.dark {
+    background-color: gainsboro;
+    color: #222;
+}
+
 .navbar {
     list-style-type: none;
     /* margin: 0 10%; */
@@ -176,6 +181,7 @@ button:hover {
 }
 
 footer {
+    color: gainsboro;
     width: auto;
     margin: 5% 0; 
     border-radius: 5px;
@@ -219,9 +225,51 @@ footer ul li {
     margin-right: 7%;
 }
 
+footer ul li a {
+    color: gainsboro;
+    font-size: 1.8vh;
+    text-decoration: none;
+    padding: 5px;
+}
+
+.footerCnt {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
 footer p a:hover {
     color: dodgerblue;
 }
+
+.copyright{
+    /* background: #222; */
+    width: 98%;
+    padding: 20px;
+    text-align: center;
+}
+
+.copyright p{
+    float: left;
+    font-size: 1.8vh;
+    word-spacing: 2px;
+}
+
+ .copyright p a{
+   color: gainsboro;
+   font-size: 1.8vh;
+   text-decoration: none;
+}
+
+.copyright p a:hover{
+    color: tomato;
+}
+
+footer ul li a:hover {
+    cursor: pointer;
+}
+
 
 .fa {
     /* padding: 20%; */
@@ -254,4 +302,10 @@ footer p a:hover {
     padding: 20%;
     background: transparent;
     color: white;
+}
+
+@media screen and (max-width: 600px) {
+    .footerCnt {
+        flex-direction: column;
+    }
 }

@@ -4,6 +4,7 @@ body {
     font-size: large;
     color: gainsboro;
     /* margin: 0 10%; */
+    transition: all 1s ease;
 }
 
 .dark {
@@ -147,19 +148,20 @@ label {
   font-size: 12px;
   font-weight: bold;
   text-transform: uppercase;
-  color: gainsboro;
+  /* color: gainsboro; */
 
   min-width: 100px;
 }
  
 input {
-  background: gainsboro;
+  background: lightgrey;
   width: 100%;
   border: 0;
   border-radius: 4px;
   padding: 12px 16px;
   color: black;
   font-size: 14px;
+  border: 2px solid skyblue;
 }
  
 button {
@@ -168,7 +170,7 @@ button {
    border: 0;
    border-radius: 4px;
    padding: 12px 16px;
-   color: white;
+   /* color: white; */
    font-size: inherit;
    font-weight: bold;
    text-transform: uppercase;
@@ -207,7 +209,7 @@ footer p a {
 
 footer p {
     float: left;
-    font-size: 1.8vh;
+    /* font-size: 1.8vh; */
     word-spacing: 2px;
 }
 
@@ -227,7 +229,7 @@ footer ul li {
 
 footer ul li a {
     color: gainsboro;
-    font-size: 1.8vh;
+    /* font-size: 1.8vh; */
     text-decoration: none;
     padding: 5px;
 }
@@ -252,13 +254,13 @@ footer p a:hover {
 
 .copyright p{
     float: left;
-    font-size: 1.8vh;
+    /* font-size: 1.8vh; */
     word-spacing: 2px;
 }
 
  .copyright p a{
    color: gainsboro;
-   font-size: 1.8vh;
+   /* font-size: 1.8vh; */
    text-decoration: none;
 }
 

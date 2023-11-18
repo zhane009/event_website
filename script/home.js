@@ -1,3 +1,4 @@
+
 function responsiveNav() {
     var x = document.querySelector(".navbar");
     if (x.className === "navbar") {
@@ -12,16 +13,23 @@ icon.addEventListener("click", responsiveNav);
 
 var darkMode = document.querySelector("#dark-mode");
 darkMode.addEventListener("click", function() {
+
     document.body.classList.toggle("dark");
+
     if(document.body.classList.contains("dark")) {
-      document.querySelector(".background").style.opacity = "0.9";
-      document.querySelector(".text-on-background").style.color = "white";
+      if (document.title == "Home Page") {
+        document.querySelector(".background").style.opacity = "0.9";
+        document.querySelector(".text-on-background").style.color = "white";    
+      }
       document.querySelector("#dark-mode").setAttribute("class", "fa-solid fa-sun");
       localStorage.darkMode = false;
     } 
+
     else {
-      document.querySelector(".background").style.opacity = "0.5";
-      document.querySelector(".text-on-background").style.color = "skyblue";
+      if (document.title == "Home Page"){
+        document.querySelector(".background").style.opacity = "0.5";
+        document.querySelector(".text-on-background").style.color = "skyblue";
+      }
       document.querySelector("#dark-mode").setAttribute("class", "fa-solid fa-moon");
       localStorage.darkMode = true;
     }
@@ -53,13 +61,17 @@ fontReset.addEventListener("click", function() {
 
 if(localStorage.darkMode == "false") {
   document.body.classList.add("dark");
-  document.querySelector(".background").style.opacity = "0.9";
-  document.querySelector(".text-on-background").style.color = "white";
+  if (document.title == "Home Page") {
+    document.querySelector(".background").style.opacity = "0.9";
+    document.querySelector(".text-on-background").style.color = "white";
+  }
   document.querySelector("#dark-mode").setAttribute("class", "fa-solid fa-sun");
 }
 else {
-  document.querySelector(".background").style.opacity = "0.5";
-  document.querySelector(".text-on-background").style.color = "skyblue";
+  if (document.title == "Home Page") {
+    document.querySelector(".background").style.opacity = "0.5";
+    document.querySelector(".text-on-background").style.color = "skyblue";
+  }
   document.querySelector("#dark-mode").setAttribute("class", "fa-solid fa-moon");
 }
 
@@ -73,3 +85,16 @@ else {
   document.body.style.fontSize = "large";
 }
 
+const xhttpr = new XMLHttpRequest(); 
+xhttpr.open('GET', 'https://app.ticketmaster.com/discovery/v2/events.json?classificationName=Music,Sports&countryCode=UK&apikey=tr5Ym0keqAAxUXx12Zsius14yoZwLfys', true); 
+  
+xhttpr.send(); 
+  
+xhttpr.onload = ()=> { 
+  if (xhttpr.status === 200) { 
+      const response = JSON.parse(xhttpr.response); 
+      localStorage.setItem('data', JSON.stringify(response._embedded.events));
+  } else { 
+      // Handle error 
+  } 
+}; 

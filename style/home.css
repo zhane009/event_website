@@ -12,6 +12,12 @@ body {
     color: #222;
 }
 
+:root {
+    --primary-color: skyblue;
+    --secondary-color: dodgerblue;
+    --text-color: gainsboro; 
+}
+
 /* #controlPanel {
     display: flex;
     float: right;
@@ -55,9 +61,10 @@ body {
     /* margin: 0 10%; */
     padding: 0;
     overflow: hidden;
-    background-color: skyblue;
+    background-color: var(--primary-color);
     border-radius: 5px;
-    transition: all 1s ease;
+    /* transition: all 1s ease; */
+    margin: 0;
 }
 
 .navbar_btn img {
@@ -93,15 +100,11 @@ body {
 }
 
 li a:hover {
-    background-color: dodgerblue;
+    background-color: var(--secondary-color);
     color: black;
 }
 
 @media screen and (max-width: 600px) {
-    body {
-        /* font-size: 1.5vh; */
-    }
-
     .navbar div li {display: none;}
     .navbar_item_right .icon {
         float: right;
@@ -133,10 +136,86 @@ li a:hover {
     }
 }
 
+.control {
+    float: right;
+    position: relative;
+    margin: 1%;
+    z-index: 1;
+    top: 0;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.row, .row2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.buttons {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: black;     
+    width: 10rem;
+    /* opacity: 0.8; */
+}
+
+@keyframes showControl {
+    0% {
+        opacity: 0;
+        right: 10rem;
+    }   
+    100% {
+        opacity: 0.8;
+        right: 0;
+    }
+}
+
+.showControl-animation {
+    animation: 1s showControl alternate;
+}
+
+.active {
+    display:block;
+}
+
+#controlButton {
+    position: relative;
+    margin-top: 1rem;
+    width: 3rem;
+    height: 2rem;
+}
+
+.buttons button {
+    padding: 10px;
+    width: 1.8rem;
+    height: fit-content;
+    /* border-radius: 50%; */
+    border: none;
+    margin: 0.2rem;
+}
+
+.buttons button:hover {
+    cursor: pointer;
+    background-color: var(--secondary-color);
+    z-index: 1;
+}
+
+#controlButton:hover {
+    cursor: pointer;
+    background-color: var(--secondary-color);
+}
+
 .container {
     position: relative;
     text-align: left;
-    color: gainsboro;
+    color: var(--text-color);
+    /* background-image: url("/photos/index-background.jpg"); */
+    margin-top: -15px;
 }
   
 .text-on-background{
@@ -146,7 +225,7 @@ li a:hover {
     left: 10%;
     transform: translate(-15%, 25%);
     font-size: 5vw;
-    color: skyblue;
+    color: var(--primary-color);
 }
 
 .text-on-background p {
@@ -157,6 +236,9 @@ li a:hover {
     0% {
       transform: translate(-15%, 100%);
       opacity: 0;
+    }
+    80%{
+        opacity: 1;
     }
     100% {
       transform: translate(-15%, 25%);
@@ -169,7 +251,7 @@ li a:hover {
 }
 
 .background {
-    margin-top: 3vh;
+    /* margin-top: 3vh; */
     width: 100%;
     height: 50%;
     opacity: 0.6;
@@ -182,7 +264,7 @@ li a:hover {
     border: 2px solid grey;
     border-radius: 10px;
     background-color: transparent;
-    color: skyblue;
+    color: var(--primary-color);
     padding: 20px 20px;
     font-size: 2.5vh;
     cursor: pointer;
@@ -198,12 +280,12 @@ section {
 
 .btn1:hover {
     border: 2px solid gold;
-    color: dodgerblue;
+    color: var(--secondary-color);
 }
 
 
 .btn2:hover {
-    color : dodgerblue;
+    color : var(--secondary-color);
     border: 2px solid gold;
     display: inline-block;
     vertical-align: middle;
@@ -226,16 +308,16 @@ section {
 
 
 .desc {
-    background-color: skyblue;
+    background-color: var(--primary-color);
     color: #222;
     text-align: center;
     padding: 20px;
     border-radius: 5px;
-    margin-top: 3rem;
+    /* margin-top: 3rem; */
 }
 
 .desc img {
-    width: auto;
+    width: 100%;
 }
 
 
@@ -308,7 +390,7 @@ section {
     opacity: 0;
     transition: opacity 0.5s ease;
     backdrop-filter: blur(3px);
-    color: gainsboro;
+    color: var(--secondary-color);
 }   
 
 .overlay > * {
@@ -356,7 +438,7 @@ section {
 }
 
 footer {
-    color: gainsboro;
+    color: var(--text-color);
     width: auto;
     margin-top: 3%;
     border-radius: 5px;
@@ -376,7 +458,7 @@ footer h2 {
 }
 
 footer p a {
-    color: gainsboro;
+    color: var(--text-color);
     /* font-size: 16px; */
     text-decoration: none;
 }
@@ -402,7 +484,7 @@ footer ul li {
 }
 
 footer ul li a {
-    color: gainsboro;
+    color: var(--text-color);
     /* font-size: 1.8vh; */
     text-decoration: none;
     padding: 5px;
@@ -417,7 +499,7 @@ footer ul li a {
 }
 
 footer p a:hover {
-    color: dodgerblue;
+    color: var(--secondary-color);
 }
 
 .copyright{
@@ -434,13 +516,13 @@ footer p a:hover {
 }
 
  .copyright p a{
-   color: gainsboro;
+   color: var(--text-color);
    /* font-size: 1.8vh; */
    text-decoration: none;
 }
 
 .copyright p a:hover{
-    color: tomato;
+    color: var(--secondary-color);
 }
 
 footer ul li a:hover {

@@ -19,7 +19,7 @@ darkMode.addEventListener("click", function() {
     if(document.body.classList.contains("dark")) {
       if (document.title == "Home Page") {
         document.querySelector(".background").style.opacity = "0.9";
-        document.querySelector(".text-on-background").style.color = "white";    
+        document.querySelector(".text-on-background").style.color = "var(--primary-color)";    
       }
       document.querySelector("#dark-mode").setAttribute("class", "fa-solid fa-sun");
       localStorage.darkMode = false;
@@ -28,13 +28,57 @@ darkMode.addEventListener("click", function() {
     else {
       if (document.title == "Home Page"){
         document.querySelector(".background").style.opacity = "0.5";
-        document.querySelector(".text-on-background").style.color = "skyblue";
+        document.querySelector(".text-on-background").style.color = "var(--primary-color)";
       }
       document.querySelector("#dark-mode").setAttribute("class", "fa-solid fa-moon");
       localStorage.darkMode = true;
     }
 }
 );	
+
+var control = document.querySelector("#controlButton");
+control.addEventListener("click", function() {
+  var button = document.querySelector(".buttons");
+  button.classList.toggle("active");
+});
+
+
+var buttons = document.querySelectorAll(".control .buttons .row button");
+buttons.forEach(item =>{
+  item.addEventListener("click", function() {
+    document.documentElement.style.setProperty("--primary-color", item.style.backgroundColor);
+    document.documentElement.style.setProperty("--secondary-color", item.style.color);
+    localStorage.primaryColor = item.style.backgroundColor;
+    localStorage.secondaryColor = item.style.color;
+  })
+});
+
+if (localStorage.primaryColor == "skyblue") {
+  document.documentElement.style.setProperty("--primary-color", "skyblue");
+  document.documentElement.style.setProperty("--secondary-color", "dodgerblue");
+}
+else if (localStorage.primaryColor == "yellow") {
+  document.documentElement.style.setProperty("--primary-color", "yellow");
+  document.documentElement.style.setProperty("--secondary-color", "orange");
+}
+else if (localStorage.primaryColor == "rgb(255, 0, 78)") {
+  document.documentElement.style.setProperty("--primary-color", "#ff004e");
+  document.documentElement.style.setProperty("--secondary-color", "#ff8d00");
+}
+else if (localStorage.primaryColor == "yellowgreen") {
+  document.documentElement.style.setProperty("--primary-color", "yellowgreen");
+  document.documentElement.style.setProperty("--secondary-color", "yellow");
+}
+else if (localStorage.primaryColor == "orange") {
+  document.documentElement.style.setProperty("--primary-color", "orange");
+  document.documentElement.style.setProperty("--secondary-color", "yellowgreen");
+}
+else if (localStorage.primaryColor == "rgb(142, 0, 255)") {
+  document.documentElement.style.setProperty("--primary-color", "#8e00ff");
+  document.documentElement.style.setProperty("--secondary-color", "#ff00e8");
+}
+
+
 
 var fontIncre = document.querySelector("#font-incre");
 
@@ -63,14 +107,14 @@ if(localStorage.darkMode == "false") {
   document.body.classList.add("dark");
   if (document.title == "Home Page") {
     document.querySelector(".background").style.opacity = "0.9";
-    document.querySelector(".text-on-background").style.color = "white";
+    document.querySelector(".text-on-background").style.color = "var(--primary-color)";
   }
   document.querySelector("#dark-mode").setAttribute("class", "fa-solid fa-sun");
 }
 else {
   if (document.title == "Home Page") {
     document.querySelector(".background").style.opacity = "0.5";
-    document.querySelector(".text-on-background").style.color = "skyblue";
+    document.querySelector(".text-on-background").style.color = "var(--primary-color)";
   }
   document.querySelector("#dark-mode").setAttribute("class", "fa-solid fa-moon");
 }

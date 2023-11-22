@@ -1,0 +1,40 @@
+{
+    "events": [
+        {
+            "title": "Winter Wonderland",
+            "brief": "Brief 1",
+            "description": "Description 1",
+            "startDate": "Date 1",
+            "endDate": "Date 2",
+            "location": "Location 1",
+            "image": "./photos/winter-wonderland.jpg"
+        },
+        {
+            "title": "Local Fires X The Bygones Book Tour",
+            "brief": "Brief 2",
+            "description": "Description 2",
+            "startDate": "Date 3",
+            "endDate": "Date 4",
+            "location": "Location 2",
+            "image": "./photos/book-tour.jpg"
+        },
+        {
+            "title": "KPOP Neon Rave",
+            "brief": "Brief 3",
+            "description": "Description 3",
+            "startDate": "Date 5",
+            "endDate": "Date 6",
+            "location": "Location 3",
+            "image": "./photos/rave.jpg"
+        },
+        {
+            "title": "Trilogy",
+            "brief": "Brief 4",
+            "description": "Description 4",
+            "startDate": "Date 7",
+            "endDate": "Date 8",
+            "location": "Location 4",
+            "image": "./photos/illenium.jpg"
+        }
+    ]
+}

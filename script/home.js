@@ -21,7 +21,7 @@ darkMode.addEventListener("click", function() {
         document.querySelector(".background").style.opacity = "0.9";
         document.querySelector(".text-on-background").style.color = "var(--primary-color)";    
       }
-      document.querySelector("#dark-mode").setAttribute("class", "fa-solid fa-sun");
+      document.querySelector("#dark-mode a").setAttribute("class", "fa-solid fa-sun");
       localStorage.darkMode = false;
     } 
 
@@ -30,7 +30,7 @@ darkMode.addEventListener("click", function() {
         document.querySelector(".background").style.opacity = "0.5";
         document.querySelector(".text-on-background").style.color = "var(--primary-color)";
       }
-      document.querySelector("#dark-mode").setAttribute("class", "fa-solid fa-moon");
+      document.querySelector("#dark-mode a").setAttribute("class", "fa-solid fa-moon");
       localStorage.darkMode = true;
     }
 }
@@ -109,14 +109,14 @@ if(localStorage.darkMode == "false") {
     document.querySelector(".background").style.opacity = "0.9";
     document.querySelector(".text-on-background").style.color = "var(--primary-color)";
   }
-  document.querySelector("#dark-mode").setAttribute("class", "fa-solid fa-sun");
+  document.querySelector("#dark-mode a").setAttribute("class", "fa-solid fa-sun");
 }
 else {
   if (document.title == "Home Page") {
     document.querySelector(".background").style.opacity = "0.5";
     document.querySelector(".text-on-background").style.color = "var(--primary-color)";
   }
-  document.querySelector("#dark-mode").setAttribute("class", "fa-solid fa-moon");
+  document.querySelector("#dark-mode a").setAttribute("class", "fa-solid fa-moon");
 }
 
 if (localStorage.fontSize == "x-large"){
@@ -129,16 +129,50 @@ else {
   document.body.style.fontSize = "large";
 }
 
-const xhttpr = new XMLHttpRequest(); 
-xhttpr.open('GET', 'https://app.ticketmaster.com/discovery/v2/events.json?classificationName=Music,Sports&countryCode=UK&apikey=tr5Ym0keqAAxUXx12Zsius14yoZwLfys', true); 
+// const xhttpr = new XMLHttpRequest(); 
+// xhttpr.open('GET', 'https://app.ticketmaster.com/discovery/v2/events.json?classificationName=Music,Sports&countryCode=UK&apikey=tr5Ym0keqAAxUXx12Zsius14yoZwLfys', true); 
   
-xhttpr.send(); 
+// xhttpr.send(); 
   
-xhttpr.onload = ()=> { 
-  if (xhttpr.status === 200) { 
-      const response = JSON.parse(xhttpr.response); 
-      localStorage.setItem('data', JSON.stringify(response._embedded.events));
-  } else { 
-      // Handle error 
-  } 
-}; 
+// xhttpr.onload = ()=> { 
+//   if (xhttpr.status === 200) { 
+//       const response = JSON.parse(xhttpr.response); 
+//       localStorage.setItem('data', JSON.stringify(response._embedded.events));
+//   } else { 
+//       // Handle error 
+//   } 
+// }; 
+
+function getEvents() {
+  return fetch("./data/events.json")
+  .then(response => response.json())
+  // .then(data => {
+  //   // console.log(data);
+  //   return data;
+  // });
+  
+};
+
+getEvents().then(data => {
+  console.log(data);
+
+  var events = data.events;
+  var i = 0;
+  
+  document.querySelector("#event1 .eventTitle").innerHTML = events[0].title;
+  document.querySelector("#event1 .eventDesc").innerHTML = events[0].brief;
+
+  for (let event in events){
+    var id = "#event" + (i + 1);
+    console.log(id + " .eventTitle");
+    document.querySelector(id + " .eventTitle").innerHTML = events[i].title;
+    document.querySelector(id + " .eventDesc").innerHTML = events[i].brief;
+    document.querySelector(id + " img").src = events[i].image;
+    i++;
+  }
+
+
+});
+// for (let i = 0; i < 2; i++){
+//   console.log(events[i]);
+// } 

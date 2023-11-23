@@ -12,14 +12,16 @@ body {
     color: #222;
 }
 
+
 .navbar {
     list-style-type: none;
     /* margin: 0 10%; */
     padding: 0;
     overflow: hidden;
-    background-color: skyblue;
+    background-color: var(--primary-color);
     border-radius: 5px;
-    transition: all 1s ease;
+    /* transition: all 1s ease; */
+    margin: 0;
 }
 
 .navbar_btn img {
@@ -33,7 +35,6 @@ body {
 
 .navbar_item_right {
     float: right;
-    
 }
   
 .navbar_btn{
@@ -43,7 +44,7 @@ body {
     text-align: center;
     padding: 10px 1vw;
     text-decoration: none;
-    transition: all 1s ease;
+    transition: all 0.5s ease;
 }
  
 .navbar_item_right .icon {
@@ -57,25 +58,20 @@ body {
 }
 
 li a:hover {
-    background-color: dodgerblue;
+    background-color: var(--secondary-color);
     color: black;
 }
 
 @media screen and (max-width: 600px) {
-    body {
-        font-size: 1.5vh;
-    }
-
     .navbar div li {display: none;}
     .navbar_item_right .icon {
         float: right;
         display: block;
     }
+}
 
-    .navbar.responsive {
-        position: relative;
-        transition: all 1s ease;
-    }
+@media screen and (max-width: 600px) {
+    .navbar.responsive {position: relative;}
     .navbar.responsive .navbar_item_right .icon {
         position: absolute;
         top: 0;
@@ -86,13 +82,11 @@ li a:hover {
         float: left;
         flex-direction: column;
         clear: both;
-        transition: all 1s ease;
     }
     .navbar.responsive .navbar_item_right li:not(:last-child){
         position: relative;
         float: left;
         display: block;
-        transition: all 1s ease;
     }
 
     .navbar_btn {
@@ -100,18 +94,123 @@ li a:hover {
     }
 }
 
+.control nav {
+    padding: 0;
+}
+
+.control {
+    float: right;
+    /* position: relative; */
+    /* margin: 1%; */
+    z-index: 1;
+    /* top: 0; */
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.row, .row2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.row {
+    justify-content: space-between;
+    border: 1px solid var(--primary-color);
+    /* background-color: aquamarine; */
+    border-radius: 12px;
+    padding: 5px 10px;
+    margin: 10px 5px;;
+}
+
+
+.buttons {
+    display: none;
+    position: absolute;
+    right: 0.5rem;
+    background-color: black; 
+    z-index: 1;    
+    width: 10rem;
+    top: 3.8rem;
+    /* opacity: 0.8; */
+}
+
+@keyframes showControl {
+    0% {
+        opacity: 0;
+        /* top: 3.8rem; */
+        right: 10rem;
+    }   
+    100% {
+        opacity: 0.8;
+        /* top: 3.8rem; */
+        right: 0.5rem;
+    }
+}
+
+.showControl-animation {
+    animation: 1s showControl alternate ;
+}
+
+.active {
+    display:block;
+}
+
+#controlButton {
+    /* position: relative; */
+    /* margin-top: 1rem; */
+    width: 3rem;
+    padding: 12px;
+    /* height: 2rem; */
+}
+
+.buttons button {
+    padding: 10px;
+    width: 1.8rem;
+    height: fit-content;
+    /* border-radius: 50%; */
+    border: none;
+    margin: 0.2rem;
+}
+
+.buttons button:hover {
+    cursor: pointer;
+    background-color: var(--secondary-color);
+    z-index: 1;
+}
+
+#controlButton:hover {
+    cursor: pointer;
+    background-color: var(--secondary-color);
+}
+
 .eventbox {
     margin: auto;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     width: 80%;
     height: auto;
 }
 
+.eventbox h3 {
+    color : var(--primary-color);
+}
+
 .eventbox a {
     text-decoration: none;
+}
+
+.events {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
 .eventImage {
@@ -133,12 +232,14 @@ li a:hover {
     background: rgba(0, 0, 0, 0.6);
     display: flex;
     flex-direction: column;
+    text-align: center;
     align-items: center;
+    justify-items: center;
     justify-content: center;    
     opacity: 0;
     transition: opacity 0.5s ease;
     backdrop-filter: blur(3px);
-    color: gainsboro;
+    color: var(--secondary-color);
 }   
 
 .overlay > * {
@@ -150,11 +251,27 @@ li a:hover {
     transform: translateY(0);
 }
 
+.event:hover {
+    animation: event 0.5s ease-in-out alternate;
+    width: 105%;
+    margin: 0 -3.5%;
+    z-index: 1;
+}
+
+@keyframes event {
+    from {
+        width: 100%;
+        margin: 0;
+    }
+    to {
+        width: 105%;
+        margin: 0 -3.5%;
+    }
+}
+
 .overlay:hover {
     opacity: 1;
 }
-
-
 
 .eventTitle {
     font-size: 2rem;
@@ -165,15 +282,15 @@ li a:hover {
 }
 
 @media screen and (max-width: 600px) {
-    .eventbox {
+    .events {
         flex-direction: column;
     }
 }
 
 footer {
-    color: gainsboro;
+    color: var(--text-color);
     width: auto;
-    margin: 5% 0; 
+    margin-top: 3%;
     border-radius: 5px;
     background-color: #111;
     display: flex;
@@ -182,22 +299,27 @@ footer {
     flex-direction: column;
     text-align: center;
 }
-footer h2 {
+
+
+footer h2, h3 {
     /* font-size: 3vh; */
     font-weight: 400;
     line-height: 3rem;
+    color: var(--primary-color);
 }
 
 footer p a {
-    color: gainsboro;
+    color: var(--text-color);
     /* font-size: 16px; */
     text-decoration: none;
+    transition: all 0.5s ease;
 }
 
 footer p {
     float: left;
     /* font-size: 1.8vh; */
     word-spacing: 2px;
+
 }
 
 footer ul {
@@ -215,11 +337,14 @@ footer ul li {
 }
 
 footer ul li a {
-    color: gainsboro;
+    color: var(--text-color);
     /* font-size: 1.8vh; */
     text-decoration: none;
     padding: 5px;
+    border-radius: 5px;
+    transition: all 0.5s ease;
 }
+   
 
 .footerCnt {
     display: flex;
@@ -229,7 +354,7 @@ footer ul li a {
 }
 
 footer p a:hover {
-    color: dodgerblue;
+    color: var(--secondary-color);
 }
 
 .copyright{
@@ -246,13 +371,13 @@ footer p a:hover {
 }
 
  .copyright p a{
-   color: gainsboro;
+   color: var(--text-color);
    /* font-size: 1.8vh; */
    text-decoration: none;
 }
 
 .copyright p a:hover{
-    color: tomato;
+    color: var(--secondary-color);
 }
 
 footer ul li a:hover {

@@ -87,6 +87,7 @@ body {
     text-align: center;
     padding: 10px 1vw;
     text-decoration: none;
+    transition: all 0.5s ease;
 }
  
 .navbar_item_right .icon {
@@ -159,27 +160,36 @@ li a:hover {
     justify-content: center;
 }
 
+.row {
+    justify-content: space-between;
+    border: 1px solid var(--primary-color);
+    /* background-color: aquamarine; */
+    border-radius: 12px;
+    padding: 5px 10px;
+    margin: 10px 5px;;
+}
+
 .buttons {
     display: none;
     position: absolute;
-    right: 0;
+    right: 0.5rem;
     background-color: black; 
     z-index: 1;    
     width: 10rem;
-    top: 3.5rem;
+    top: 3.8rem;
     /* opacity: 0.8; */
 }
 
 @keyframes showControl {
     0% {
         opacity: 0;
-        top: 3.5rem;
+        /* top: 3.8rem; */
         right: 10rem;
     }   
     100% {
         opacity: 0.8;
-        top: 3.5rem;
-        right: 0;
+        /* top: 3.8rem; */
+        right: 0.5rem;
     }
 }
 
@@ -195,6 +205,7 @@ li a:hover {
     /* position: relative; */
     /* margin-top: 1rem; */
     width: 3rem;
+    padding: 12px;
     /* height: 2rem; */
 }
 
@@ -232,7 +243,7 @@ li a:hover {
     top: 0;
     left: 10%;
     transform: translate(-15%, 25%);
-    font-size: 5vw;
+    font-size: 4.5vw;
     color: var(--primary-color);
 }
 
@@ -333,7 +344,7 @@ section {
     padding: 10px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1025px) {
     .text-on-background {
         margin-top: 8%;
         margin-left: 5%;
@@ -372,7 +383,7 @@ section {
     height: auto;
 }
 
-.eventbox h2 {
+.eventbox h3 {
     color : var(--primary-color);
 }
 
@@ -473,6 +484,7 @@ footer {
     justify-content: center;
     flex-direction: column;
     text-align: center;
+    transition: all 0.5s ease;
 }
 
 
@@ -487,6 +499,8 @@ footer p a {
     color: var(--text-color);
     /* font-size: 16px; */
     text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.5s ease;
 }
 
 footer p {
@@ -514,6 +528,8 @@ footer ul li a {
     /* font-size: 1.8vh; */
     text-decoration: none;
     padding: 5px;
+    border-radius: 5px;
+    transition: all 0.5s ease;
 }
    
 

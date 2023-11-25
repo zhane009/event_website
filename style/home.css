@@ -383,7 +383,7 @@ section {
     height: auto;
 }
 
-.eventbox h3 {
+.eventbox h2, h3 {
     color : var(--primary-color);
 }
 

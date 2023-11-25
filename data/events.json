@@ -20,7 +20,7 @@
         },
         {
             "title": "KPOP Neon Rave",
-            "brief": "Brief 3",
+            "brief": "whatever 3",
             "description": "Description 3",
             "startDate": "Date 5",
             "endDate": "Date 6",
@@ -34,6 +34,15 @@
             "startDate": "Date 7",
             "endDate": "Date 8",
             "location": "Location 4",
+            "image": "./photos/illenium.jpg"
+        },
+        {
+            "title": "Title 5",
+            "brief": "Brief 5",
+            "description": "Description 5",
+            "startDate": "Date 9",
+            "endDate": "Date 10",
+            "location": "Location 5",
             "image": "./photos/illenium.jpg"
         }
     ]

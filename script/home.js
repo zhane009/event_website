@@ -129,50 +129,55 @@ else {
   document.body.style.fontSize = "large";
 }
 
-// const xhttpr = new XMLHttpRequest(); 
-// xhttpr.open('GET', 'https://app.ticketmaster.com/discovery/v2/events.json?classificationName=Music,Sports&countryCode=UK&apikey=tr5Ym0keqAAxUXx12Zsius14yoZwLfys', true); 
-  
-// xhttpr.send(); 
-  
-// xhttpr.onload = ()=> { 
-//   if (xhttpr.status === 200) { 
-//       const response = JSON.parse(xhttpr.response); 
-//       localStorage.setItem('data', JSON.stringify(response._embedded.events));
-//   } else { 
-//       // Handle error 
-//   } 
-// }; 
 
 function getEvents() {
   return fetch("./data/events.json")
   .then(response => response.json())
-  // .then(data => {
-  //   // console.log(data);
-  //   return data;
-  // });
-  
 };
 
 getEvents().then(data => {
-  console.log(data);
-
   var events = data.events;
   var i = 0;
-  
-  document.querySelector("#event1 .eventTitle").innerHTML = events[0].title;
-  document.querySelector("#event1 .eventDesc").innerHTML = events[0].brief;
 
   for (let event in events){
     var id = "#event" + (i + 1);
-    console.log(id + " .eventTitle");
-    document.querySelector(id + " .eventTitle").innerHTML = events[i].title;
-    document.querySelector(id + " .eventDesc").innerHTML = events[i].brief;
-    document.querySelector(id + " img").src = events[i].image;
+
+    const eventArea = document.querySelector(".eventbox .events");
+    
+    const container = document.createElement("a");
+    container.href = "event1.html";
+
+    const div = document.createElement("div");
+    div.classList.add("event");
+    div.id = id;
+
+    const img = document.createElement("img");
+    img.classList.add("eventImage");
+    img.src = events[i].image;
+
+    const overlay = document.createElement("div");
+    overlay.classList.add("overlay");
+
+    const title = document.createElement("h3");
+    title.classList.add("eventTitle");
+    title.innerHTML = events[i].title;
+
+    const desc = document.createElement("p");
+    desc.classList.add("eventDesc");
+    desc.innerHTML = events[i].brief; 
+
+    div.appendChild(img);
+    overlay.appendChild(title);
+    overlay.appendChild(desc);
+    div.appendChild(overlay);
+    container.appendChild(div);
+    
+    eventArea.appendChild(container);
     i++;
+    if (document.title == "Home Page" && i == 4) {
+      break;
+    }
   }
 
 
 });
-// for (let i = 0; i < 2; i++){
-//   console.log(events[i]);
-// } 

@@ -3,8 +3,13 @@ body {
     font-family: 'Raleway', sans-serif;
     font-size: large;
     color: gainsboro;
-    /* margin: 0 10%; */
+    margin: 0;
+    margin-top: 5px;
     transition: all 1s ease;
+}
+
+* {
+ box-sizing: border-box;   
 }
 
 .dark {
@@ -264,7 +269,7 @@ button:hover {
 }
 
 footer {
-    color: var(--text-color);
+    color: gainsboro;
     width: auto;
     margin-top: 3%;
     border-radius: 5px;

@@ -17,19 +17,13 @@ darkMode.addEventListener("click", function() {
     document.body.classList.toggle("dark");
 
     if(document.body.classList.contains("dark")) {
-      if (document.title == "Home Page") {
-        document.querySelector(".background").style.opacity = "0.9";
-        document.querySelector(".text-on-background").style.color = "var(--primary-color)";    
-      }
+
       document.querySelector("#dark-mode a").setAttribute("class", "fa-solid fa-sun");
       localStorage.darkMode = false;
     } 
 
     else {
-      if (document.title == "Home Page"){
-        document.querySelector(".background").style.opacity = "0.5";
-        document.querySelector(".text-on-background").style.color = "var(--primary-color)";
-      }
+
       document.querySelector("#dark-mode a").setAttribute("class", "fa-solid fa-moon");
       localStorage.darkMode = true;
     }
@@ -105,17 +99,9 @@ fontReset.addEventListener("click", function() {
 
 if(localStorage.darkMode == "false") {
   document.body.classList.add("dark");
-  if (document.title == "Home Page") {
-    document.querySelector(".background").style.opacity = "0.9";
-    document.querySelector(".text-on-background").style.color = "var(--primary-color)";
-  }
   document.querySelector("#dark-mode a").setAttribute("class", "fa-solid fa-sun");
 }
 else {
-  if (document.title == "Home Page") {
-    document.querySelector(".background").style.opacity = "0.5";
-    document.querySelector(".text-on-background").style.color = "var(--primary-color)";
-  }
   document.querySelector("#dark-mode a").setAttribute("class", "fa-solid fa-moon");
 }
 
@@ -174,10 +160,20 @@ getEvents().then(data => {
     
     eventArea.appendChild(container);
     i++;
-    if (document.title == "Home Page" && i == 4) {
-      break;
-    }
   }
 
 
 });
+
+
+
+var scrollBtn = document.querySelector("#scroll");
+
+scrollBtn.addEventListener("click", function() {
+  var events = document.querySelector(".eventbox");
+    events.scrollIntoView({
+        behavior: "smooth",
+        alignTop: true
+    });
+});
+

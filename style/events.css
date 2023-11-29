@@ -3,8 +3,13 @@ body {
     font-family: 'Raleway', sans-serif;
     font-size: large;
     color: gainsboro;
-    /* margin: 0 10%; */
+    margin: 0;
+    margin-top: 5px;
     transition: all 1s ease;
+}
+
+* {
+ box-sizing: border-box;   
 }
 
 .dark {
@@ -187,6 +192,62 @@ li a:hover {
     background-color: var(--secondary-color);
 }
 
+.content {
+    position: relative;
+    text-align: left;
+    color: var(--text-color);
+    /* background-image: url("/photos/index-background.jpg"); */
+    margin-top: 0px;
+}
+  
+
+.content img {
+    width: 100%;
+}
+
+.text-on-background{
+    width: 50%;
+    position: absolute;
+    top: 30%;
+    /* text-align: right; */
+    /* left: 10%; */
+    /* transform: translate(-15%, 25%); */
+    font-size: 4.5vw;
+    color: var(--primary-color);
+}
+
+.btn1 {
+    margin-top: 15px;
+    margin-left: 18%;
+    width : 50%;
+    border: 2px solid grey;
+    border-radius: 10px;
+    background-color: transparent;
+    color: var(--primary-color);
+    padding: 20px 20px;
+    font-size: 2.5vh;
+    cursor: pointer;
+}
+
+.btn1:hover {
+    border-color: var(--secondary-color);
+    color: var(--secondary-color);
+}
+
+@media screen and (max-width: 1025px) {
+    .text-on-background {
+        /* margin-top: 8%;
+        margin-left: 5%; */
+        width: 90%;
+    }
+
+    .btn1 {
+        margin-left: 10%;
+        padding: 10px 10px;
+        font-size: 1.5vh;
+    }
+}
+
 .eventbox {
     margin: auto;
     display: flex;
@@ -288,7 +349,7 @@ li a:hover {
 }
 
 footer {
-    color: var(--text-color);
+    color: gainsboro;
     width: auto;
     margin-top: 3%;
     border-radius: 5px;

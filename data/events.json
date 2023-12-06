@@ -45,5 +45,90 @@
             "location": "Location 5",
             "image": "./photos/illenium.jpg"
         }
+    ],
+
+    "details": [
+        {
+            "title": "Winter Wonderland",
+            "brief": "Brief 1",
+            "description": "Christmas comes to Nottingham with a brand-new ice-rink trail, observation wheel, market stalls, ice bar and your favourite food & beverages.<br>Click to view details.",
+            "date": "7th Nov - 31st Dec",
+            "location": "Nottingham",
+            "image": "./photos/winter-wonderland-events2.jpg"
+        },
+        {
+            "title": "Winter Wonderland",
+            "brief": "Brief 1",
+            "description": "Christmas comes to Nottingham with a brand-new ice-rink trail, observation wheel, market stalls, ice bar and your favourite food & beverages.<br>Click to view details.",
+            "date": "7th Nov - 31st Dec",
+            "location": "Nottingham",
+            "image": "./photos/winter-wonderland-events2.jpg"
+        },
+        {
+            "title": "Winter Wonderland",
+            "brief": "Brief 1",
+            "description": "Christmas comes to Nottingham with a brand-new ice-rink trail, observation wheel, market stalls, ice bar and your favourite food & beverages.<br>Click to view details.",
+            "date": "7th Nov - 31st Dec",
+            "location": "Nottingham",
+            "image": "./photos/winter-wonderland-events2.jpg"
+        },
+        {
+            "title": "Winter Wonderland",
+            "brief": "Brief 1",
+            "description": "Christmas comes to Nottingham with a brand-new ice-rink trail, observation wheel, market stalls, ice bar and your favourite food & beverages.<br>Click to view details.",
+            "date": "7th Nov - 31st Dec",
+            "location": "Nottingham",
+            "image": "./photos/winter-wonderland-events2.jpg"
+        },
+        {
+            "title": "Winter Wonderland",
+            "brief": "Brief 1",
+            "description": "Christmas comes to Nottingham with a brand-new ice-rink trail, observation wheel, market stalls, ice bar and your favourite food & beverages.<br>Click to view details.",
+            "date": "7th Nov - 31st Dec",
+            "location": "Nottingham",
+            "image": "./photos/winter-wonderland-events2.jpg"
+        },
+        {
+            "title": "Winter Wonderland",
+            "brief": "Brief 1",
+            "description": "Christmas comes to Nottingham with a brand-new ice-rink trail, observation wheel, market stalls, ice bar and your favourite food & beverages.<br>Click to view details.",
+            "date": "7th Nov - 31st Dec",
+            "location": "Nottingham",
+            "image": "./photos/winter-wonderland-events2.jpg"
+        },
+        {
+            "title": "Winter Wonderland",
+            "brief": "Brief 1",
+            "description": "Christmas comes to Nottingham with a brand-new ice-rink trail, observation wheel, market stalls, ice bar and your favourite food & beverages.<br>Click to view details.",
+            "date": "7th Nov - 31st Dec",
+            "location": "Nottingham",
+            "image": "./photos/winter-wonderland-events2.jpg"
+        },
+        {
+            "title": "Winter Wonderland",
+            "brief": "Brief 1",
+            "description": "Christmas comes to Nottingham with a brand-new ice-rink trail, observation wheel, market stalls, ice bar and your favourite food & beverages.<br>Click to view details.",
+            "date": "7th Nov - 31st Dec",
+            "location": "Nottingham",
+            "image": "./photos/winter-wonderland-events2.jpg"
+        },
+        {
+            "title": "Winter Wonderland",
+            "brief": "Brief 1",
+            "description": "Christmas comes to Nottingham with a brand-new ice-rink trail, observation wheel, market stalls, ice bar and your favourite food & beverages.<br>Click to view details.",
+            "date": "7th Nov - 31st Dec",
+            "location": "Nottingham",
+            "image": "./photos/winter-wonderland-events2.jpg"
+        },
+        {
+            "title": "Winter Wonderland",
+            "brief": "Brief 1",
+            "description": "Christmas comes to Nottingham with a brand-new ice-rink trail, observation wheel, market stalls, ice bar and your favourite food & beverages.<br>Click to view details.",
+            "date": "7th Nov - 31st Dec",
+            "location": "Nottingham",
+            "image": "./photos/winter-wonderland-events2.jpg"
+        }
+    
     ]
+    
 }

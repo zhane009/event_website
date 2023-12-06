@@ -208,9 +208,9 @@ li a:hover {
 .text-on-background{
     width: 50%;
     position: absolute;
-    top: 30%;
+    top: 15%;
     /* text-align: right; */
-    /* left: 10%; */
+    left: 5%;
     /* transform: translate(-15%, 25%); */
     font-size: 4.5vw;
     color: var(--primary-color);
@@ -218,7 +218,7 @@ li a:hover {
 
 .btn1 {
     margin-top: 15px;
-    margin-left: 18%;
+    margin-left: 12%;
     width : 50%;
     border: 2px solid grey;
     border-radius: 10px;
@@ -242,10 +242,14 @@ li a:hover {
     }
 
     .btn1 {
-        margin-left: 10%;
+        margin-left: 3%;
         padding: 10px 10px;
         font-size: 1.5vh;
     }
+}
+
+.events a {
+    text-decoration: none;
 }
 
 .eventbox {
@@ -262,21 +266,35 @@ li a:hover {
     color : var(--primary-color);
 }
 
+.event p, h3 {
+    margin-block-end: 0.5rem;
+    margin-block-start: 0.5rem;
+}
+
 .eventbox a {
     text-decoration: none;
 }
 
 .events {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
     width: 100%;
+    height: 100%;
+}
+
+.event-row {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1rem;
 }
 
 .eventImage {
     display: block;
     width: 100%;
+    height: auto;
+
 }
 
 .event {
@@ -286,47 +304,86 @@ li a:hover {
 
 .overlay {
     position: absolute;
+    /* bottom: 0; */
     top: 0;
     left: 0;
+    /* right: 0; */
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.9);
+    overflow: hidden;
+    width: 0;
+    height: 100%;
     display: flex;
     flex-direction: column;
     text-align: center;
     align-items: center;
     justify-items: center;
     justify-content: center;    
-    opacity: 0;
-    transition: opacity 0.5s ease;
-    backdrop-filter: blur(3px);
+    /* opacity: 0; */
+    transition: all 0.5s ease;
+    /* backdrop-filter: blur(3px); */
     color: var(--secondary-color);
 }   
 
-.overlay > * {
-    transform: translateY(20px);
-    transition: 0.5s ease;
+
+.overlay-text {
+    position: absolute;
+    width: 75%;
+    top: 10%;
+    /* left: 0; */
+    right: 0;
+    /* bottom: 0; */
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;   
+    transition: all 0.5s ease;
+    opacity: 0;
 }
 
-.overlay:hover > * {
-    transform: translateY(0);
+.eventTitle {
+    color: var(--primary-color); 
 }
 
-.event:hover {
-    animation: event 0.5s ease-in-out alternate;
-    width: 105%;
-    margin: 0 -3.5%;
+.eventDesc {
+    color: var(--secondary-color);
+}
+
+.event:hover .overlay{
+    animation: event 1s ease alternate;
+    width: 100%;
+    /* margin: 0 -3.5%; */
     z-index: 1;
 }
 
+.event:hover .overlay-text{
+    animation: text-on-event 1s ease alternate;
+    opacity: 1;
+    right: 10%;
+    /* left: 0; */
+    z-index: 1;
+} 
+
 @keyframes event {
-    from {
+    0% {
+        width: 0%;
+    }
+    100% {
         width: 100%;
-        margin: 0;
+    }
+}
+
+@keyframes text-on-event {
+    from {
+        opacity: 0;
+        right: 0;
     }
     to {
-        width: 105%;
-        margin: 0 -3.5%;
+        opacity: 1;
+        right: 10%;
     }
 }
 
@@ -342,10 +399,39 @@ li a:hover {
     margin-top: 0.3rem;
 }
 
-@media screen and (max-width: 600px) {
-    .events {
+@media screen and (max-width: 1050px) {
+    .event-row {
         flex-direction: column;
+        margin:0;
     }
+    .event-row :first-child{
+        margin-bottom: 0.5rem;
+    }
+    .overlay-text {
+        margin-top: 1rem;
+        width: 100%;
+        /* right: 50%; */
+        right: -10%;
+        top: 0;
+    }
+
+    @keyframes text-on-event {
+        from {
+            opacity: 0;
+            right: -10%;
+        }
+        to {
+            opacity: 1;
+            right: 0;
+        }
+    }
+    .event:hover .overlay-text{
+        animation: text-on-event 1s ease alternate;
+        opacity: 1;
+        right: 0;
+        /* left: 0; */
+        z-index: 1;
+    } 
 }
 
 footer {

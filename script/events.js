@@ -122,49 +122,75 @@ function getEvents() {
 };
 
 getEvents().then(data => {
-  var events = data.events;
-  var i = 0;
+  var events = data.details;
+  // var i = 0;
+  var index = 0;
 
   for (let event in events){
-    var id = "event" + (i + 1);
 
     const eventArea = document.querySelector(".eventbox .events");
-    
-    const container = document.createElement("a");
-    container.href = "event1.html";
+    const row = document.createElement("div");
+    row.classList.add("event-row");
 
-    const div = document.createElement("div");
-    div.classList.add("event");
-    div.id = id;
+    do {
+      if (index >= events.length){
+        break;
+      }
+      var id = "event" + (index + 1);
+      const container = document.createElement("a");
+      container.href = "event1.html";
 
-    const img = document.createElement("img");
-    img.classList.add("eventImage");
-    img.src = events[i].image;
+      const div = document.createElement("div");
+      div.classList.add("event");
+      div.id = id;
 
-    const overlay = document.createElement("div");
-    overlay.classList.add("overlay");
+      const img = document.createElement("img");
+      img.classList.add("eventImage");
+      img.src = events[index].image;
 
-    const title = document.createElement("h3");
-    title.classList.add("eventTitle");
-    title.innerHTML = events[i].title;
+      const overlay = document.createElement("div");
+      overlay.classList.add("overlay");
 
-    const desc = document.createElement("p");
-    desc.classList.add("eventDesc");
-    desc.innerHTML = events[i].brief; 
+      const overlay2 = document.createElement("div");
+      overlay2.classList.add("overlay-text");
 
-    div.appendChild(img);
-    overlay.appendChild(title);
-    overlay.appendChild(desc);
-    div.appendChild(overlay);
-    container.appendChild(div);
-    
-    eventArea.appendChild(container);
-    i++;
+      const title = document.createElement("h3");
+      title.classList.add("eventTitle");
+      title.innerHTML = events[index].title;
+
+      const desc = document.createElement("p");
+      desc.classList.add("eventDesc");
+      desc.innerHTML = events[index].description; 
+
+      const date = document.createElement("p");
+      date.innerHTML = events[index].date;
+      date.classList.add("eventDesc");
+
+      div.appendChild(img);
+      overlay2.appendChild(title);
+      overlay2.appendChild(desc);
+      overlay2.appendChild(date);
+
+      // overlay.appendChild(button);
+      div.appendChild(overlay);
+      div.appendChild(overlay2);
+      container.appendChild(div);
+      row.appendChild(container)
+
+      index += 1;
+
+    }while (index % 2 != 0);
+
+    eventArea.appendChild(row);
+
+    // i++;
+    if (index > events.length){
+      break;
+    }
+
   }
 
-
 });
-
 
 
 var scrollBtn = document.querySelector("#scroll");

@@ -127,6 +127,10 @@ getEvents().then(data => {
   var index = 0;
 
   for (let event in events){
+    
+    if (index >= events.length){
+      break;
+    }
 
     const eventArea = document.querySelector(".eventbox .events");
     const row = document.createElement("div");
@@ -162,13 +166,20 @@ getEvents().then(data => {
       desc.classList.add("eventDesc");
       desc.innerHTML = events[index].description; 
 
+      const location = document.createElement("p");
+      location.innerHTML = events[index].location;
+      location.classList.add("eventDesc");
+
       const date = document.createElement("p");
       date.innerHTML = events[index].date;
       date.classList.add("eventDesc");
 
+      
+
       div.appendChild(img);
       overlay2.appendChild(title);
       overlay2.appendChild(desc);
+      overlay2.appendChild(location);
       overlay2.appendChild(date);
 
       // overlay.appendChild(button);

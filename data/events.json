@@ -12,7 +12,7 @@
         {
             "title": "Local Fires X The Bygones Book Tour",
             "brief": "Brief 2",
-            "description": "Description 2",
+            "description": "Jim Gibson & Joshua Jones read from their acclaimed short story collections with poets & musicians joining to make the night a real party",
             "startDate": "Date 3",
             "endDate": "Date 4",
             "location": "Location 2",
@@ -51,82 +51,82 @@
         {
             "title": "Winter Wonderland",
             "brief": "Brief 1",
-            "description": "Christmas comes to Nottingham with a brand-new ice-rink trail, observation wheel, market stalls, ice bar and your favourite food & beverages.<br>Click to view details.",
+            "description": "Christmas comes to Nottingham with a brand-new ice-rink trail, observation wheel, market stalls, ice bar and your favourite food & beverages.",
             "date": "7th Nov - 31st Dec",
-            "location": "Nottingham",
-            "image": "./photos/winter-wonderland-events2.jpg"
+            "location": "Nottingham, UK",
+            "image": "./photos/winter-wonderland-events.jpg"
         },
         {
-            "title": "Winter Wonderland",
+            "title": "Local Fires X The Bygones Book Tour",
             "brief": "Brief 1",
-            "description": "Christmas comes to Nottingham with a brand-new ice-rink trail, observation wheel, market stalls, ice bar and your favourite food & beverages.<br>Click to view details.",
-            "date": "7th Nov - 31st Dec",
-            "location": "Nottingham",
-            "image": "./photos/winter-wonderland-events2.jpg"
+            "description": "Jim Gibson & Joshua Jones read from their acclaimed short story collections with poets & musicians joining to make the night a real party",
+            "date": "14th Dec",
+            "location": "Nottingham, UK",
+            "image": "./photos/book-tour1.jpg"
         },
         {
-            "title": "Winter Wonderland",
+            "title": "Show What I Have - The 1st World Tour",
             "brief": "Brief 1",
-            "description": "Christmas comes to Nottingham with a brand-new ice-rink trail, observation wheel, market stalls, ice bar and your favourite food & beverages.<br>Click to view details.",
-            "date": "7th Nov - 31st Dec",
-            "location": "Nottingham",
-            "image": "./photos/winter-wonderland-events2.jpg"
+            "description": "The 5th generation shooting star,IVE is finally making their touring debut. Catch the girl group in their first world tour, Show What I Have.",
+            "date": "16th June, 2024",
+            "location": "The O2 Arena, London, UK",
+            "image": "./photos/ive-tour.jpg"
         },
         {
-            "title": "Winter Wonderland",
+            "title": "Trilogy",
             "brief": "Brief 1",
-            "description": "Christmas comes to Nottingham with a brand-new ice-rink trail, observation wheel, market stalls, ice bar and your favourite food & beverages.<br>Click to view details.",
-            "date": "7th Nov - 31st Dec",
-            "location": "Nottingham",
-            "image": "./photos/winter-wonderland-events2.jpg"
+            "description": "One of the undisputed biggest acts in electronic music today – ILLENIUM – is bringing his renowned Trilogy concert series to Los Angeles at SoFi Stadium on Friday, February 2, 2024.",
+            "date": "2nd Feb 2024",
+            "location": "Los Angeles, US",
+            "image": "./photos/illenium-trilogy.jpg"
         },
         {
-            "title": "Winter Wonderland",
+            "title": "Hyde Park Winter Wonderland",
             "brief": "Brief 1",
-            "description": "Christmas comes to Nottingham with a brand-new ice-rink trail, observation wheel, market stalls, ice bar and your favourite food & beverages.<br>Click to view details.",
-            "date": "7th Nov - 31st Dec",
-            "location": "Nottingham",
-            "image": "./photos/winter-wonderland-events2.jpg"
+            "description": "Experience London's magical winter destination. Enjoy ice skating, rides, food, entertainment and more.",
+            "date": "18th Nov - 2nd Jan",
+            "location": "London, UK",
+            "image": "./photos/london-wonderland.jpg"
         },
         {
-            "title": "Winter Wonderland",
+            "title": "Tomorrowland Winter",
             "brief": "Brief 1",
-            "description": "Christmas comes to Nottingham with a brand-new ice-rink trail, observation wheel, market stalls, ice bar and your favourite food & beverages.<br>Click to view details.",
-            "date": "7th Nov - 31st Dec",
-            "location": "Nottingham",
-            "image": "./photos/winter-wonderland-events2.jpg"
+            "description": "Tomorrowland returned to Alpe d’Huez in 2023 for the third edition of Tomorrowland Winter.",
+            "date": "16th Mar- 23rd Mar 2024",
+            "location": "Aple D'Hues, France",
+            "image": "./photos/tomorrowland.jpg"
         },
         {
-            "title": "Winter Wonderland",
+            "title": "Ultra Music Festival",
             "brief": "Brief 1",
-            "description": "Christmas comes to Nottingham with a brand-new ice-rink trail, observation wheel, market stalls, ice bar and your favourite food & beverages.<br>Click to view details.",
-            "date": "7th Nov - 31st Dec",
-            "location": "Nottingham",
-            "image": "./photos/winter-wonderland-events2.jpg"
+            "description": "The world's premier electronic music festival, boasting elite DJs and unparalleled production located in the beautiful city of Miami.",
+            "date": "22nd Mar - 24th Mar 2024",
+            "location": "Bayfront Park, Downtown Miami, US",
+            "image": "./photos/ultra-festival.jpg"
         },
         {
-            "title": "Winter Wonderland",
+            "title": "Creamfields",
             "brief": "Brief 1",
-            "description": "Christmas comes to Nottingham with a brand-new ice-rink trail, observation wheel, market stalls, ice bar and your favourite food & beverages.<br>Click to view details.",
-            "date": "7th Nov - 31st Dec",
-            "location": "Nottingham",
-            "image": "./photos/winter-wonderland-events2.jpg"
+            "description": "2024 will be no exception as the UK's one and only edition returns to the fields of Cheshire from 22nd - 25th August.",
+            "date": "22nd Aug - 25th Aug 2024",
+            "location": "Daresbury, Cheshire, UK",
+            "image": "./photos/creamfields.jpg"
         },
         {
-            "title": "Winter Wonderland",
+            "title": "New Year's Eve Masquerade Ball",
             "brief": "Brief 1",
-            "description": "Christmas comes to Nottingham with a brand-new ice-rink trail, observation wheel, market stalls, ice bar and your favourite food & beverages.<br>Click to view details.",
-            "date": "7th Nov - 31st Dec",
-            "location": "Nottingham",
-            "image": "./photos/winter-wonderland-events2.jpg"
+            "description": "Join us at the renowned London Hotel, The Dorchester, as we bid farewell to the year in extravagant fashion with Luxury London Events.",
+            "date": "31st Dec",
+            "location": "The Dorchester, London, UK",
+            "image": "./photos/new-year-ball.jpg"
         },
         {
-            "title": "Winter Wonderland",
+            "title": "OfficialKevents | KPOP & KHIPHOP Night",
             "brief": "Brief 1",
-            "description": "Christmas comes to Nottingham with a brand-new ice-rink trail, observation wheel, market stalls, ice bar and your favourite food & beverages.<br>Click to view details.",
-            "date": "7th Nov - 31st Dec",
-            "location": "Nottingham",
-            "image": "./photos/winter-wonderland-events2.jpg"
+            "description": "Groove to the KPop Beats: Our DJ will spin the hottest K-Pop tracks, from chart-toppers to hidden gems. Get ready to dance the night away to the electrifying beats of your favorite KPop idols.",
+            "date": "5th Jan 2024",
+            "location": "FIRE nightclub, London, UK",
+            "image": "./photos/kpop-night.jpg"
         }
     
     ]

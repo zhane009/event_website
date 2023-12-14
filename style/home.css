@@ -78,6 +78,7 @@ body {
 }
   
 .navbar_item {
+    padding-top: 1px;
     float: left;
 }
 

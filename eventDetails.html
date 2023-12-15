@@ -84,49 +84,59 @@
         <div class="layout">
             <div class="event">
                 <div class="event-img">
-                    <img src="./photos/illenium-trilogy.jpg" alt="Event Image">
+                    <img  alt="Event Image" id="image">
                 </div>
 
                 <div class="details">
-                    <h1>Trilogy</h1>
+                    
+                    <h1 id="event-name"></h1>
 
                     <div class="all-info">
                         <div class="info">
                             <i class="fa-solid fa-calendar-days"></i>
-                            <p>2nd February 2024</p>
+                            <p id="date"></p>
                         </div>
     
                         <div class="info">
                             <i class="fa-solid fa-location-dot"></i>
-                            <p>SoFi Stadium, Los Angles, United States</p>
+                            <p  id="location"></p>
+                            <a  target="_blank" id="map">
+                                <p>&emsp;(View on Map)</p>
+                            </a>
                         </div>
     
                         <div class="info">
                             <i class="fa-solid fa-dollar-sign"></i>
-                            <p>Starting from $38.50</p>
-                        </div>
-    
-                        <div class="info">
-                            <i class="fa-regular fa-user"></i>
-                            <p>Hosted by Illenium</p>
+                            <p id="price"></p>
                         </div>
                         
                         <div class="info">
                             <i class="fa-solid fa-user-lock"></i>
-                            <p>Age Restriction: 18+</p>
+                            <p>Age Restriction:&nbsp;</p>
+                            <p id="ageRestriction"></p>
                         </div>
                     </div>
                 </div>
 
-                <div class="desc">
-                    <h1>Description</h1>
-                    <p>After headlining the largest electronic concert in Colorado's history, ILLENIUM is bringing his three-album showcase to Los Angeles for a doubleheader next year.
-                        <br><br>
-                        The melodic bass superstar is set to bring the third "Trilogy" installment to SoFi Stadium, the home of the NFL's Los Angeles Rams and Chargers, in February 2024. As seen in previous iterations of the series, ILLENIUM will take the stage for three distinct sets that encapsulate all of his albums that led him to become one of the biggest artists in modern-day electronic music.
-                        <br><br>
-                        ILLENIUM will take the stage for his next "Trilogy" event on Friday, February 2nd, 2024.
+                <div class="desc-box">
+                    <h1>About</h1>
+                    <p id="description">
                     </p>
-                    
+                </div>
+
+                <div class="desc-box">
+                    <h1>Venue and Time</h1>
+                    <p id="venue"></p>
+                    <p id="time"></p>
+                </div>
+
+                <div class="desc-box">
+                    <h1>Get Tickets</h1>
+                    <a target="_blank" id="tickets">
+                        <button class="btn">
+                            Book Now!
+                        </button>    
+                    </a>
                 </div>
             </div>
         </div>

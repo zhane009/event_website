@@ -235,6 +235,29 @@ li a:hover {
     background-color: var(--secondary-color);
 }
 
+@media screen and (max-width: 600px) {
+    * {
+        font-size: medium;
+    }
+    
+    .buttons {
+        left: 12.5rem;
+        top: -7.5rem;
+    }
+
+    @keyframes showControl {
+        0% {
+            opacity: 0;
+            left: 0rem;
+        }
+        100%{
+            opacity: 1;
+            left: 12.5rem;
+        }
+    }
+    
+}
+
 .container {
     position: relative;
     text-align: left;

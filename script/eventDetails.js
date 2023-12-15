@@ -19,8 +19,10 @@ darkMode.addEventListener("click", function() {
 
       document.querySelector("#dark-mode a").setAttribute("class", "fa-solid fa-sun");
       localStorage.darkMode = false;
-      document.querySelector(".details").setAttribute("style", "background-color: white;");
-      document.querySelector(".desc").setAttribute("style", "background-color: white;");
+      document.querySelector(".details").setAttribute("style", "background-color: #F8F6F0;");
+      document.querySelectorAll(".desc-box").forEach(item => {
+        item.setAttribute("style", "background-color: #F8F6F0;");
+      });
     } 
 
     else {
@@ -28,7 +30,9 @@ darkMode.addEventListener("click", function() {
       document.querySelector("#dark-mode a").setAttribute("class", "fa-solid fa-moon");
       localStorage.darkMode = true;
       document.querySelector(".details").setAttribute("style", "background-color: #333; color: gainsboro;");
-      document.querySelector(".desc").setAttribute("style", "background-color: #333; color: gainsboro;");
+      document.querySelectorAll(".desc-box").forEach(item => {
+        item.setAttribute("style", "background-color: #333; color: gainsboro;");
+      });
     } 
     }
 );	
@@ -103,14 +107,18 @@ fontReset.addEventListener("click", function() {
 if(localStorage.darkMode == "false") {
   document.body.classList.add("dark");
   document.querySelector("#dark-mode a").setAttribute("class", "fa-solid fa-sun");
-  document.querySelector(".details").setAttribute("style", "background-color: white;");
-  document.querySelector(".desc").setAttribute("style", "background-color: white;");
+  document.querySelector(".details").setAttribute("style", "background-color: #F8F6F0;");
+  document.querySelectorAll(".desc-box").forEach(item => {
+    item.setAttribute("style", "background-color: #F8F6F0;");
+  });
 
 }
 else {
   document.querySelector("#dark-mode a").setAttribute("class", "fa-solid fa-moon");
   document.querySelector(".details").setAttribute("style", "background-color: #333; color: gainsboro;");
-  document.querySelector(".desc").setAttribute("style", "background-color: #333; color: gainsboro;");
+  document.querySelectorAll(".desc-box").forEach(item => {
+    item.setAttribute("style", "background-color: #333; color: gainsboro;");
+  });
 }
 
 if (localStorage.fontSize == "x-large"){
@@ -122,3 +130,62 @@ else if (localStorage.fontSize == "medium"){
 else {
   document.body.style.fontSize = "large";
 }
+
+function getEvents() {
+  return fetch("./data/events.json")
+  .then(response => response.json())
+};
+
+getEvents().then(data => {
+  var events = data.details;
+  var chosenEvent;
+  
+  console.log(localStorage.eventId);
+  for (let i = 0; i < events.length; i++) {
+    if (events[i].id == localStorage.eventId) {
+      chosenEvent = events[i];
+    }
+  };
+
+  const eventImg = document.querySelector("#image");
+  eventImg.setAttribute("src", chosenEvent.image);
+
+  const eventTitle = document.querySelector("#event-name");
+  eventTitle.textContent = chosenEvent.title;
+
+  const eventDate = document.querySelector("#date");
+  eventDate.textContent = chosenEvent.dateLong;
+
+  const eventLocation = document.querySelector("#location");
+  eventLocation.textContent = chosenEvent.locationLong;
+
+  const price = document.querySelector("#price");
+  price.textContent = chosenEvent.ticket;
+
+  const locationUrl = document.querySelector("#map");
+  locationUrl.setAttribute("href", chosenEvent.locationUrl);
+
+  const eventPrice = document.querySelector("#price");
+  eventPrice.textContent = chosenEvent.ticket;
+
+  const ageRestriction = document.querySelector("#ageRestriction");
+  ageRestriction.textContent = chosenEvent.age;
+
+  const eventDesc = document.querySelector("#description");
+  eventDesc.innerHTML = chosenEvent.description;
+
+  const venue = document.querySelector("#venue");
+  venue.textContent = chosenEvent.locationLong;
+
+  const eventTime = document.querySelector("#time");
+  eventTime.textContent = chosenEvent.time;
+
+  const tickets = document.querySelector("#tickets");
+  tickets.setAttribute("href", chosenEvent.ticketUrl);
+
+
+
+
+
+
+});

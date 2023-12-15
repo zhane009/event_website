@@ -164,7 +164,7 @@ getEvents().then(data => {
 
       const desc = document.createElement("p");
       desc.classList.add("eventDesc");
-      desc.innerHTML = events[index].description; 
+      desc.innerHTML = events[index].brief; 
 
       const location = document.createElement("p");
       location.innerHTML = events[index].location;
@@ -198,11 +198,18 @@ getEvents().then(data => {
     if (index > events.length){
       break;
     }
-
   }
 
-});
 
+}).finally(function() {
+  var events = document.querySelectorAll(".event");
+  events.forEach(item => {
+    item.addEventListener("click", function() {
+      var id = item.id;
+      localStorage.eventId = id;
+    })
+  })
+});
 
 var scrollBtn = document.querySelector("#scroll");
 

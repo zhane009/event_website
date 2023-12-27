@@ -381,6 +381,7 @@ footer ul {
 footer ul li {
     padding: 3%;
     margin-right: 7%;
+    transition: all 0.5s ease;
 }
 
 footer ul li a {
@@ -400,8 +401,9 @@ footer ul li a {
     width: 100%;
 }
 
-footer p a:hover {
-    color: var(--secondary-color);
+footer ul li a:hover {
+    background-color: var(--secondary-color);
+    color: black;
 }
 
 .copyright{
@@ -417,7 +419,7 @@ footer p a:hover {
     word-spacing: 2px;
 }
 
- .copyright p a{
+.copyright p a{
    color: var(--text-color);
    /* font-size: 1.8vh; */
    text-decoration: none;
@@ -427,9 +429,9 @@ footer p a:hover {
     color: var(--secondary-color);
 }
 
-footer ul li a:hover {
+/* footer ul li a:hover {
     cursor: pointer;
-}
+} */
 
 
 .fa {

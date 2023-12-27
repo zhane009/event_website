@@ -159,8 +159,8 @@ getEvents().then(data => {
   const eventLocation = document.querySelector("#location");
   eventLocation.textContent = chosenEvent.locationLong;
 
-  const price = document.querySelector("#price");
-  price.textContent = chosenEvent.ticket;
+  // const price = document.querySelector("#price");
+  // price.textContent = chosenEvent.ticket;
 
   const locationUrl = document.querySelector("#map");
   locationUrl.setAttribute("href", chosenEvent.locationUrl);

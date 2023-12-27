@@ -63,7 +63,7 @@ body {
     right: 0;
 }
 
-li a:hover {
+.navbar_btn:hover {
     background-color: var(--secondary-color);
     color: black;
 }
@@ -578,8 +578,9 @@ footer ul li a {
     width: 100%;
 }
 
-footer p a:hover {
-    color: var(--secondary-color);
+footer ul li a:hover {
+    background-color: var(--secondary-color);
+    color: black;
 }
 
 .copyright{

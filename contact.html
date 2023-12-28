@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/96e6ec0a99.js" crossorigin="anonymous"></script>
-    <script src = "script/home.js" defer></script>
+    <script src = "script/contact.js" defer></script>
     <title>Contact Us</title>
 </head>
 <body>
@@ -85,22 +85,41 @@
         </div>
 
         <div class="form-area">
-            <form id="contact-form" action="#">
-              <div class="control-wrap">
-                <label for="fullName">Name</label>
-                <input type="text" name="fullName" id="fullName" />
-              </div>
-              <div class="control-wrap">
-                <label for="email">Email</label>
-                <input type="text" name="email" id="email" />
-              </div>
-              <div class="control-wrap">
-                <label for="reason">Reason for Contacting</label>
-                <input type="text" name="reason" id="reason" />
-              </div>
-              <div class="control-wrap centered">
-                <button type="submit" id="save-btn">Save</button>
-              </div>
+            <form id="contact-form" >
+                <div class="form-column">
+                    <div class="form-row">
+                        
+                            <!-- <label for="fistName">First Name</label> -->
+                        <input type="text" name="firstName" id="firstName" placeholder="First Name" />
+                        
+                        
+                            <!-- <label for="lastName">Last Name</label> -->
+                        <input type="text" name="lastName" id="lastName" placeholder="Last Name"/>
+                        
+                        
+                    </div>
+                    <div class="form-row">
+                        
+                            <!-- <label for="email">Email</label> -->
+                        <input type="text" name="email" id="email" placeholder="Email Address" />
+                        
+                        
+                        
+                            <!-- <label for="phone">Phone Number</label> -->
+                        <input type="text" name="phone" id="phone" placeholder="Mobile Number" />
+                        
+                    </div>
+                    <div class="form-row">
+                        
+                            <!-- <label for="reason">Query</label> -->
+                        <textarea type="text" name="reason" id="reason" placeholder="Reason(s) For Contacting" ></textarea>
+                        
+                    </div>
+
+                    <div class="control-wrap centered">
+                        <button type="submit" id="save-btn">Save</button>
+                    </div>
+              </div>  
             </form>
           </div>
 
@@ -128,25 +147,6 @@
                 </ul>
         
             </div>
-
-            <!-- <div>
-                <h3>Control Panel</h3>
-                <ul>
-                    <li>
-                        <a id="dark-mode" class="fa-solid fa-moon"></a>
-                    </li>
-                    <li>
-                        <a id="font-incre">A+</a>
-                    </li>
-                    <li>
-                        <a id="font-reset">A</a>
-                    </li>
-                    <li>
-                        <a id="font-decre">A-</a>
-                    </li>
-                </ul>
-      
-            </div> -->
     
             <div>
                 <h3>Follow us on social media</h3>

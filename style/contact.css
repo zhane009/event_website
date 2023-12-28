@@ -181,6 +181,29 @@ li a:hover {
     background-color: var(--secondary-color);
 }
 
+@media screen and (max-width: 600px) {
+    * {
+        font-size: medium;
+    }
+    
+    .buttons {
+        left: 12.5rem;
+        top: -7.5rem;
+    }
+
+    @keyframes showControl {
+        0% {
+            opacity: 0;
+            left: 0rem;
+        }
+        100%{
+            opacity: 1;
+            left: 12.5rem;
+        }
+    }
+    
+}
+
 header {
     display: flex;
     justify-content: space-between;
@@ -192,20 +215,25 @@ header {
 }
 
 .content {
-    max-width: 500px;
+    max-width: 90%;
     margin: 10px auto;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    padding: 15px 0;
 }
 
-.heading h3 {
+.header h3 {
+    /* padding-top: 1rem; */
     text-align: center;
+    color: black;
 }
-
+/* 
 .control-wrap {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 10px 0;
-}
+    margin: 10px ;
+} */
 
 .centered {
     justify-content: center;
@@ -220,52 +248,83 @@ header {
     /* background-color: aquamarine; */
     border-radius: 12px;
     padding: 5px 10px;
-    margin: 10px 5px;;
+    margin: 10px 5px;
 }
 
-.name-id{
+.form-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center ;
+    margin-bottom: 1rem;
+}
+
+.form-column {
     display: flex;
     flex-direction: column;
-    gap: 5px
+    justify-content: space-around;
+    align-items: center ;
 }
 
-
-
 label {
-  font-size: 12px;
+  /* font-size: 12px; */
   font-weight: bold;
   text-transform: uppercase;
-  /* color: gainsboro; */
+  color: var(--secondary-color);
 
   min-width: 100px;
 }
  
-input {
+input, textarea {
   background: lightgrey;
-  width: 100%;
+  width: 20rem;
   border: 0;
   border-radius: 4px;
   padding: 12px 16px;
   color: black;
   font-size: 14px;
-  border: 2px solid skyblue;
+  border: 2px solid dodgerblue;
+  margin-right: 5px;
 }
-/*  
-button {
+
+textarea {
+    height: 8rem;
+    width: 40.25rem;
+}
+ 
+#save-btn {
    min-width: 150px;
-   background: grey;
-   border: 0;
+   background: transparent;
+   border: 2px solid gray;
    border-radius: 4px;
    padding: 12px 16px;
    font-size: inherit;
    font-weight: bold;
    text-transform: uppercase;
    cursor: pointer;
-} */
+   color: black;
+   transition: all 0.2s ease;
+}
  
-button:hover {
-  background-color: #c4c4c4;
-  color: #000; 
+#save-btn:hover {
+  border-color: var(--secondary-color);
+  /* color: var(--secondary-color);  */
+}
+
+@media screen and (max-width: 730px) {
+
+    .form-row {
+        flex-direction: column;
+    }
+
+    .form-row input:first-child {
+        margin-bottom: 1rem;
+    }
+
+    textarea, input {
+        width: 15rem;
+    }
+    
 }
 
 footer {
@@ -282,7 +341,7 @@ footer {
 }
 
 
-footer h2, h3 {
+footer h2 {
     /* font-size: 3vh; */
     font-weight: 400;
     line-height: 3rem;

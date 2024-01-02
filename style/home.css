@@ -496,10 +496,21 @@ section {
     margin-top: 0.3rem;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1300px) and (min-width: 700px) {
     .events {
         flex-direction: column;
+        width: 50%;
+        height: 50%;
     }
+}
+
+@media screen and (max-width: 700px) {
+    .events {
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+    
 }
 
 footer {

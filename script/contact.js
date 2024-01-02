@@ -135,7 +135,7 @@ function validateEmail(email) {
     if (isEmpty(email)) {
         return false;
     }
-    var re = /\S+@\S+\.\S+/;
+    var re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     return re.test(email);
 }
 
@@ -147,11 +147,13 @@ function validatePhone(phone) {
     return re.test(phone);
 }
 
-function isEmpty(value){
-    if (value == "") {
-        return true;
-    }
-    return false;
+function isEmpty(value) {
+  if (value == null || typeof value == 'undefined' ) return true;
+  return !(value.length > 0);
+}
+
+function onSubmit(token) {
+  document.getElementById("contact-form").submit();
 }
 
 saveBtn.addEventListener("click", function() {
@@ -161,12 +163,61 @@ saveBtn.addEventListener("click", function() {
     var phone = document.querySelector("#phone").value;
     var reason = document.querySelector("#reason").value;
 
-    if (isEmpty(firstName)) {
-        document.querySelector("#firstName").style.borderColor = "red";
-        document.querySelector("#firstName").placeholder = "First Name is required";
-        alert("First Name is required");
-    }
+    if (isEmpty(firstName) || isEmpty(lastName) || !validateEmail(email) || !validatePhone(phone) || isEmpty(reason)) {
 
+      if (isEmpty(firstName)) {
+          document.querySelector("#firstName").classList.add("error-border");
+          document.querySelector("#fname-error").style.opacity = "1";
+      }
+      else {
+          document.querySelector("#firstName").classList.remove("error-border");
+          document.querySelector("#fname-error").style.opacity = "0";
+      }
+
+      if (isEmpty(lastName)) {
+          document.querySelector("#lastName").classList.add("error-border");
+          document.querySelector("#lname-error").style.opacity = "1";
+      }
+      else {
+          document.querySelector("#lastName").classList.remove("error-border");
+          document.querySelector("#lname-error").style.opacity = "0";
+      }
+
+      if (!validateEmail(email)) {
+          document.querySelector("#email").classList.add("error-border");
+          document.querySelector("#email-error").innerHTML = "Email is required!";
+          if(!isEmpty(email)) {
+            document.querySelector("#email-error").innerHTML = "Invalid Email";
+          }
+          document.querySelector("#email-error").style.opacity = "1";
+      }
+      else {
+          document.querySelector("#email").classList.remove("error-border");
+          document.querySelector("#email-error").style.opacity = "0";
+      }
+
+      if (!validatePhone(phone)) {
+          document.querySelector("#phone").classList.add("error-border");
+          document.querySelector("#phone-error").innerHTML = "Phone Number is required!";
+          if(!isEmpty(phone)) {
+            document.querySelector("#phone-error").innerHTML = "Invalid Phone Number";
+          }
+          document.querySelector("#phone-error").style.opacity = "1";
+      }
+      else {
+          document.querySelector("#phone").classList.remove("error-border");
+          document.querySelector("#phone-error").style.opacity = "0";
+      }
+
+      if (isEmpty(reason)) {
+          document.querySelector("#reason").classList.add("error-border");
+          document.querySelector("#reason-error").style.opacity = "1";
+      }
+      else {
+          document.querySelector("#reason").classList.remove("error-border");
+          document.querySelector("#reason-error").style.opacity = "0";
+      }
+    }
 
     else {
         localStorage.fname = firstName;
@@ -175,6 +226,7 @@ saveBtn.addEventListener("click", function() {
         localStorage.phone = phone;
         localStorage.message = reason;
         alert("We will reach out to you soon!");
+        location.reload();
 
     }
     

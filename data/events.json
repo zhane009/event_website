@@ -2,48 +2,39 @@
     "events": [
         {
             "title": "Winter Wonderland",
-            "brief": "Brief 1",
+            "brief": "Christmas Festival in Nottingham.",
             "description": "Description 1",
             "startDate": "Date 1",
             "endDate": "Date 2",
             "location": "Location 1",
-            "image": "./photos/winter-wonderland.jpg"
+            "image": "./photos/winter-wonderland-index.jpg"
         },
         {
             "title": "Local Fires X The Bygones Book Tour",
-            "brief": "Brief 2",
+            "brief": "Listen to Jim Gibson & Joshua Jones read from their short story collections.",
             "description": "Jim Gibson & Joshua Jones read from their acclaimed short story collections with poets & musicians joining to make the night a real party",
             "startDate": "Date 3",
             "endDate": "Date 4",
             "location": "Location 2",
-            "image": "./photos/book-tour.jpg"
+            "image": "./photos/book-tour-index.jpg"
         },
         {
-            "title": "KPOP Neon Rave",
-            "brief": "whatever 3",
+            "title": "Show What I Have - The 1st World Tour",
+            "brief": "IVE is finally making their touring debut.",
             "description": "Description 3",
             "startDate": "Date 5",
             "endDate": "Date 6",
             "location": "Location 3",
-            "image": "./photos/rave.jpg"
+            "image": "./photos/ive-tour-index.jpg"
         },
         {
             "title": "Trilogy",
-            "brief": "Brief 4",
+            "brief": "ILLENIUM is bringing his renowned Trilogy concert series to Los Angeles.",
             "description": "Description 4",
             "startDate": "Date 7",
             "endDate": "Date 8",
             "location": "Location 4",
-            "image": "./photos/illenium.jpg"
-        },
-        {
-            "title": "Title 5",
-            "brief": "Brief 5",
-            "description": "Description 5",
-            "startDate": "Date 9",
-            "endDate": "Date 10",
-            "location": "Location 5",
-            "image": "./photos/illenium.jpg"
+            "image": "./photos/illenium-trilogy-index.jpg"
         }
     ],
 
@@ -78,7 +69,7 @@
             "age": "none",
             "ticket": "Starting from £6.00",
             "ticketUrl": "https://www.eventbrite.co.uk/e/book-tour-local-fires-x-the-bygones-tickets-764787539117",
-            "image": "./photos/book-tour1.jpg"
+            "image": "./photos/book-tour.jpg"
         },
         {
             "id" : "event3",

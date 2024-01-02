@@ -140,7 +140,7 @@ getEvents().then(data => {
   var events = data.details;
   var chosenEvent;
   
-  console.log(localStorage.eventId);
+  // console.log(localStorage.eventId);
   for (let i = 0; i < events.length; i++) {
     if (events[i].id == localStorage.eventId) {
       chosenEvent = events[i];
@@ -158,9 +158,6 @@ getEvents().then(data => {
 
   const eventLocation = document.querySelector("#location");
   eventLocation.textContent = chosenEvent.locationLong;
-
-  // const price = document.querySelector("#price");
-  // price.textContent = chosenEvent.ticket;
 
   const locationUrl = document.querySelector("#map");
   locationUrl.setAttribute("href", chosenEvent.locationUrl);
@@ -183,9 +180,4 @@ getEvents().then(data => {
   const tickets = document.querySelector("#tickets");
   tickets.setAttribute("href", chosenEvent.ticketUrl);
 
-
-
-
-
-
-});
+}); 

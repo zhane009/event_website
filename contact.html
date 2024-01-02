@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/96e6ec0a99.js" crossorigin="anonymous"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LfjsEIpAAAAAG0hpwtytQGmrRqS7LAApeK_AYWT" async defer></script>
     <script src = "script/contact.js" defer></script>
     <title>Contact Us</title>
 </head>
@@ -85,39 +86,51 @@
         </div>
 
         <div class="form-area">
-            <form id="contact-form" >
+            <form id="contact-form" onsubmit="return false" >
                 <div class="form-column">
                     <div class="form-row">
-                        
-                            <!-- <label for="fistName">First Name</label> -->
-                        <input type="text" name="firstName" id="firstName" placeholder="First Name" />
-                        
-                        
-                            <!-- <label for="lastName">Last Name</label> -->
-                        <input type="text" name="lastName" id="lastName" placeholder="Last Name"/>
-                        
-                        
-                    </div>
-                    <div class="form-row">
-                        
-                            <!-- <label for="email">Email</label> -->
-                        <input type="text" name="email" id="email" placeholder="Email Address" />
-                        
-                        
-                        
-                            <!-- <label for="phone">Phone Number</label> -->
-                        <input type="text" name="phone" id="phone" placeholder="Mobile Number" />
+                        <div class="control-wrap">
+                            <label for="fistName">First Name</label>
+                            <input type="text" name="firstName" id="firstName" />
+                            <span class="error" id="fname-error">First Name is required!</span>
+                        </div>
+                            
+                        <div class="control-wrap">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" name="lastName" id="lastName" />
+                            <span class="error" id="lname-error">Last Name is required!</span>
+                        </div>
                         
                     </div>
                     <div class="form-row">
                         
-                            <!-- <label for="reason">Query</label> -->
-                        <textarea type="text" name="reason" id="reason" placeholder="Reason(s) For Contacting" ></textarea>
-                        
+                        <div class="control-wrap">
+                            <label for="email">Email</label>
+                            <input type="text" name="email" id="email" />
+                            <span class="error" id="email-error">Email is required!</span>
+                        </div>
+                            
+                        <div class="control-wrap">
+                            <label for="phone">Phone Number</label>
+                            <input type="text" name="phone" id="phone"/>
+                            <span class="error" id="phone-error">Phone Number is required!</span>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="control-wrap">
+                            <label for="reason">Query</label>
+                            <textarea type="text" name="reason" id="reason" ></textarea>
+                            <span class="error" id="reason-error">Query is required!</span>
+                        </div>
+
                     </div>
 
+                    <div class="g-recaptcha" data-sitekey="6LfjsEIpAAAAAG0hpwtytQGmrRqS7LAApeK_AYWT"></div>
+ 
                     <div class="control-wrap centered">
-                        <button type="submit" id="save-btn">Save</button>
+                        <!-- <div class="g-recaptcha" data-sitekey="your_site_key"></div> -->
+                  
+                        <button type="submit" class="g-recaptcha" data-sitekey="6LfjsEIpAAAAAG0hpwtytQGmrRqS7LAApeK_AYWT" id="save-btn" data-callback='onSubmit' data-action='submit'>Save</button>
                     </div>
               </div>  
             </form>
@@ -153,16 +166,16 @@
     
                 <ul>
                     <li>
-                        <a href="#" class="fa fa-facebook"></a>
+                        <a href="https://www.facebook.com/zhane009" class="fa fa-facebook"></a>
                     </li>
                     <li>
-                        <a href="#" class="fa fa-twitter"></a>
+                        <a href="https://www.twitter.com/zhane009" class="fa fa-twitter"></a>
                     </li>
                     <li>
-                        <a href="" class="fa fa-instagram"></a>
+                        <a href="https://www.instagram.com/zhane009" class="fa fa-instagram"></a>
                     </li>
                     <li>
-                        <a href="" class="fa fa-youtube"></a>
+                        <a href="https://www.threads.net/zhane009" class="fa-brands fa-threads"></a>
                     </li>
                 </ul>
             

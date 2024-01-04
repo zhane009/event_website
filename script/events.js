@@ -164,15 +164,18 @@ getEvents().then(data => {
 
       const desc = document.createElement("p");
       desc.classList.add("eventDesc");
+      desc.id = "description";
       desc.innerHTML = events[index].brief; 
 
       const location = document.createElement("p");
       location.innerHTML = events[index].location;
       location.classList.add("eventDesc");
+      location.id = "location";
 
       const date = document.createElement("p");
       date.innerHTML = events[index].date;
       date.classList.add("eventDesc");
+      date.id = "date";
 
       
 
@@ -236,8 +239,11 @@ searchInput.addEventListener("keyup", function(event) {
     container.style.display = "block";
     events.forEach(item => {
       var title = item.querySelector(".eventTitle").textContent.toLowerCase();
-      // var location = item.querySelector(".eventDesc").textContent.toLowerCase();
-      if (title.includes(search)){
+      var desc = item.querySelector("#description").textContent.toLowerCase();
+      var location = item.querySelector("#location").textContent.toLowerCase();
+      var date = item.querySelector("#date").textContent.toLowerCase();
+      
+      if (title.includes(search) ||  location.includes(search)){
         
         const resultContainer = document.querySelector(".result-list");
         const result = document.createElement("li");

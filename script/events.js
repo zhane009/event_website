@@ -221,3 +221,56 @@ scrollBtn.addEventListener("click", function() {
     });
 });
 
+var searchInput = document.querySelector("#search-bar");
+searchInput.addEventListener("keyup", function(event) {
+  const resultContainer = document.querySelector(".result-list");
+
+  if (resultContainer.hasChildNodes()){
+    resultContainer.innerHTML = "";
+  }
+
+  var search = event.target.value.toLowerCase();
+  var events = document.querySelectorAll(".event");
+  const container = document.querySelector(".results");
+  if (search.length != 0){
+    container.style.display = "block";
+    events.forEach(item => {
+      var title = item.querySelector(".eventTitle").textContent.toLowerCase();
+      // var location = item.querySelector(".eventDesc").textContent.toLowerCase();
+      if (title.includes(search)){
+        
+        const resultContainer = document.querySelector(".result-list");
+        const result = document.createElement("li");
+        result.innerHTML = title;
+        result.setAttribute("is", item.id);
+        resultContainer.appendChild(result);
+      }
+      
+    })
+  }
+  else {
+    container.style.display = "none";
+  }
+
+  if (!resultContainer.hasChildNodes()) {
+    const resultContainer = document.querySelector(".result-list");
+    const result = document.createElement("p");
+    result.innerHTML = "No results found";
+    resultContainer.appendChild(result);
+  }
+  
+  var allResults = document.querySelectorAll(".result-list li");
+  allResults.forEach(item => {
+  item.addEventListener("click", function() {
+    var id = item.getAttribute("is");
+    var event = document.getElementById(id);
+    event.scrollIntoView({
+      behavior: "smooth",
+      alignTop: true
+    });
+  })
+});
+
+});
+
+

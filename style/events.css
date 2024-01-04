@@ -68,6 +68,56 @@ body {
     color: black;
 }
 
+.navbar_item div {
+    margin-top: 0.45rem;
+}
+
+.search input[type=text]{
+    width: 15rem;
+    height: 1.7rem;
+    border-radius:10px;
+    border: none;
+}
+
+.search button:hover {
+    background-color: var(--secondary-color);
+    color: black;
+}
+
+.results {
+    margin-left: -5rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    margin-top: 2rem;
+    position: absolute;
+    z-index: 1;
+    backdrop-filter: blur(3px);
+    display: none;
+}
+
+.result-list {
+    padding: 0.5rem 4rem;
+    list-style: none;
+    text-align: center;
+}
+
+.result-list li {
+    padding: 0.25rem 3rem;
+    border-radius: 5px;
+    border: 1px solid var(--primary-color);
+    transition: all 0.5s ease;
+    margin-top: 0.5rem;
+}
+
+.result-list li a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.result-list li:hover {
+    background-color: var(--secondary-color);
+    cursor: pointer;
+}
+
 @media screen and (max-width: 600px) {
     .navbar div li {display: none;}
     .navbar_item_right .icon {
@@ -97,6 +147,22 @@ body {
 
     .navbar_btn {
         text-align: left;
+    }
+
+    .results {
+        margin-left: 10rem;
+        top: -5rem;
+        
+    }
+    .result-list{
+        z-index: 1;
+        padding: 0.5rem 2rem;
+    }
+    .result-list li {
+        padding: 0.25rem 1rem;
+    }
+    .search input[type=text]{
+        width: 10rem;
     }
 }
 

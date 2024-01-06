@@ -239,16 +239,17 @@ searchInput.addEventListener("keyup", function(event) {
     container.style.display = "block";
     events.forEach(item => {
       var title = item.querySelector(".eventTitle").textContent.toLowerCase();
-      var desc = item.querySelector("#description").textContent.toLowerCase();
       var location = item.querySelector("#location").textContent.toLowerCase();
-      var date = item.querySelector("#date").textContent.toLowerCase();
       
       if (title.includes(search) ||  location.includes(search)){
         
         const resultContainer = document.querySelector(".result-list");
         const result = document.createElement("li");
-        result.innerHTML = title;
+        const link = document.createElement("a");
+        link.innerHTML = title.toUpperCase();
         result.setAttribute("is", item.id);
+        link.setAttribute("href", "eventDetails.html");
+        result.appendChild(link);
         resultContainer.appendChild(result);
       }
       
@@ -270,10 +271,12 @@ searchInput.addEventListener("keyup", function(event) {
   item.addEventListener("click", function() {
     var id = item.getAttribute("is");
     var event = document.getElementById(id);
-    event.scrollIntoView({
-      behavior: "smooth",
-      alignTop: true
-    });
+    // event.scrollIntoView({
+    //   behavior: "smooth",
+    //   alignTop: true
+    // });
+
+    localStorage.eventId = id;
   })
 });
 

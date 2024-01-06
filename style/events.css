@@ -110,7 +110,7 @@ body {
 
 .result-list li a {
     text-decoration: none;
-    color: var(--text-color);
+    color: gainsboro;
 }
 
 .result-list li:hover {
@@ -389,7 +389,7 @@ body {
     justify-content: center;    
     /* opacity: 0; */
     transition: all 0.5s ease;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(6px);
     color: var(--secondary-color);
 }   
 
@@ -397,7 +397,7 @@ body {
 .overlay-text {
     position: absolute;
     width: 75%;
-    top: 10%;
+    top: 5%;
     /* left: 0; */
     right: 0;
     /* bottom: 0; */

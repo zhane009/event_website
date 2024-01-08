@@ -34,6 +34,7 @@ body {
 }
   
 .navbar_item {
+    padding-top: 1px;
     float: left;
 }
 
@@ -202,16 +203,6 @@ li a:hover {
         }
     }
     
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    background-color: gainsboro;
-    max-width: 600px;
-    margin: 0 auto;
 }
 
 .content {

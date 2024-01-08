@@ -12,79 +12,82 @@
     <script src="https://code.jquery.com/jquery-3.7.1.slim.js" integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
     <script src = "./script/eventDetails.js" defer></script>
     <title>Details</title>
+    <link rel="icon" href="photos/logo.jpg">
 </head>
 <body>
-    <div>  
-        <ul class="navbar">
-            <li class="navbar_item">
-                <a class = "navbar_btn" href = "index.html">
-                    <img src = "photos/logo.jpg" >
-                </a>
-            </li>
-            <div class="navbar_item_right" >
+    <header>
+        <div>  
+            <ul class="navbar">
                 <li class="navbar_item">
-                    <a class="navbar_btn" href="index.html">Home</a>
+                    <a class = "navbar_btn" href = "index.html">
+                        <img src = "photos/logo.jpg" >
+                    </a>
                 </li>
-                <li class = "navbar_item">
-                    <a class="navbar_btn" href="allEvents.html">Events</a>
-                </li>
-                <li class="navbar_item">
-                    <a class="navbar_btn" href="contact.html">Contact Us</a>
-                </li>
-                <li class="navbar_item">
+                <div class="navbar_item_right" >
+                    <li class="navbar_item">
+                        <a class="navbar_btn" href="index.html">Home</a>
+                    </li>
+                    <li class = "navbar_item">
+                        <a class="navbar_btn" href="allEvents.html">Events</a>
+                    </li>
+                    <li class="navbar_item">
+                        <a class="navbar_btn" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="navbar_item">
+                        
+                            <a id = "controlButton" class="fa-solid fa-user-gear navbar_btn">
+                                
+                            </a>
+                        <div class="control">
+                            <div class="buttons showControl-animation">
+                                <div class="column">
+                                    <div class="row">
+                                        <button style="background-color: skyblue; color: dodgerblue"></button>
+                                        <button style="background-color: yellow; color: orange"></button>
+                                        <button style="background-color: #ff004e; color: #ff8d00"></button>
+                                        
+                                    </div>
                     
-                        <a id = "controlButton" class="fa-solid fa-user-gear navbar_btn">
-                            
-                        </a>
-                    <div class="control">
-                        <div class="buttons showControl-animation">
-                            <div class="column">
-                                <div class="row">
-                                    <button style="background-color: skyblue; color: dodgerblue"></button>
-                                    <button style="background-color: yellow; color: orange"></button>
-                                    <button style="background-color: #ff004e; color: #ff8d00"></button>
+                                    <div class="row">
+                                        <button style="background-color: yellowgreen; color: yellow"></button>
+                                        <button style="background-color: orange; color: yellowgreen"></button>
+                                        <button style="background-color: #8e00ff; color: #ff00e8"></button>
+                                    </div>
+                    
+                                    <div class="row2">
+                                        <button id="dark-mode">
+                                            <a class="fa-solid fa-moon"></a>
+                                        </button>
+                                        <button id="font-incre">
+                                            <a >A+</a>
+                                        </button>
+                                        <button id="font-reset">
+                                            <a >A</a>
+                                        </button>
+                                        <button id="font-decre">
+                                            <a >A-</a>
+                                        </button>
+                                    </div>
                                     
-                                </div>
-                
-                                <div class="row">
-                                    <button style="background-color: yellowgreen; color: yellow"></button>
-                                    <button style="background-color: orange; color: yellowgreen"></button>
-                                    <button style="background-color: #8e00ff; color: #ff00e8"></button>
-                                </div>
-                
-                                <div class="row2">
-                                    <button id="dark-mode">
-                                        <a class="fa-solid fa-moon"></a>
-                                    </button>
-                                    <button id="font-incre">
-                                        <a >A+</a>
-                                    </button>
-                                    <button id="font-reset">
-                                        <a >A</a>
-                                    </button>
-                                    <button id="font-decre">
-                                        <a >A-</a>
-                                    </button>
                                 </div>
                                 
                             </div>
-                            
                         </div>
-                    </div>
-                </li>
-                <li class="navbar_item icon">
-                    <a class="navbar_btn fa fa-bars"></a>
-                </li>
-                
-            </div>
-        </ul>
-    </div>
+                    </li>
+                    <li class="navbar_item icon">
+                        <a class="navbar_btn fa fa-bars"></a>
+                    </li>
+                    
+                </div>
+            </ul>
+        </div> 
+    </header>
 
-    <div class="container">
+    <section class="container">
         <div class="layout">
             <div class="event">
                 <div class="event-img">
-                    <img  alt="Event Image" id="image">
+                    <img  alt="Event Image" id="image" >
                 </div>
 
                 <div class="details">
@@ -120,8 +123,8 @@
 
                 <div class="desc-box">
                     <h1>About</h1>
-                    <p id="description">
-                    </p>
+                    <article id="description">
+                    </article>
                 </div>
 
                 <div class="desc-box">
@@ -140,7 +143,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <footer>
         <h2>Book an Event By zhane009</h2>

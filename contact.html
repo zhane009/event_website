@@ -12,73 +12,76 @@
     <!-- <script src="https://www.google.com/recaptcha/api.js?render=6LfjsEIpAAAAAG0hpwtytQGmrRqS7LAApeK_AYWT" async defer></script> -->
     <script src = "script/contact.js" defer></script>
     <title>Contact Us</title>
+    <link rel="icon" href="photos/logo.jpg">
 </head>
 <body>
-    <div>  
-        <ul class="navbar">
-            <li class="navbar_item">
-                <a class = "navbar_btn" href = "index.html">
-                    <img src = "photos/logo.jpg" >
-                </a>
-            </li>
-            <div class="navbar_item_right" >
+    <header>
+        <div>  
+            <ul class="navbar">
                 <li class="navbar_item">
-                    <a class="navbar_btn" href="index.html">Home</a>
+                    <a class = "navbar_btn" href = "index.html">
+                        <img src = "photos/logo.jpg" >
+                    </a>
                 </li>
-                <li class = "navbar_item">
-                    <a class="navbar_btn" href="allEvents.html">Events</a>
-                </li>
-                <li class="navbar_item">
-                    <a class="navbar_btn" href="contact.html">Contact Us</a>
-                </li>
-                <li class="navbar_item">
+                <div class="navbar_item_right" >
+                    <li class="navbar_item">
+                        <a class="navbar_btn" href="index.html">Home</a>
+                    </li>
+                    <li class = "navbar_item">
+                        <a class="navbar_btn" href="allEvents.html">Events</a>
+                    </li>
+                    <li class="navbar_item">
+                        <a class="navbar_btn" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="navbar_item">
+                        
+                            <a id = "controlButton" class="fa-solid fa-user-gear navbar_btn">
+                                
+                            </a>
+                        <div class="control">
+                            <div class="buttons showControl-animation">
+                                <div class="column">
+                                    <div class="row">
+                                        <button style="background-color: skyblue; color: dodgerblue"></button>
+                                        <button style="background-color: yellow; color: orange"></button>
+                                        <button style="background-color: #ff004e; color: #ff8d00"></button>
+                                        
+                                    </div>
                     
-                        <a id = "controlButton" class="fa-solid fa-user-gear navbar_btn">
-                            
-                        </a>
-                    <div class="control">
-                        <div class="buttons showControl-animation">
-                            <div class="column">
-                                <div class="row">
-                                    <button style="background-color: skyblue; color: dodgerblue"></button>
-                                    <button style="background-color: yellow; color: orange"></button>
-                                    <button style="background-color: #ff004e; color: #ff8d00"></button>
+                                    <div class="row">
+                                        <button style="background-color: yellowgreen; color: yellow"></button>
+                                        <button style="background-color: orange; color: yellowgreen"></button>
+                                        <button style="background-color: #8e00ff; color: #ff00e8"></button>
+                                    </div>
+                    
+                                    <div class="row2">
+                                        <button id="dark-mode">
+                                            <a class="fa-solid fa-moon"></a>
+                                        </button>
+                                        <button id="font-incre">
+                                            <a >A+</a>
+                                        </button>
+                                        <button id="font-reset">
+                                            <a >A</a>
+                                        </button>
+                                        <button id="font-decre">
+                                            <a >A-</a>
+                                        </button>
+                                    </div>
                                     
-                                </div>
-                
-                                <div class="row">
-                                    <button style="background-color: yellowgreen; color: yellow"></button>
-                                    <button style="background-color: orange; color: yellowgreen"></button>
-                                    <button style="background-color: #8e00ff; color: #ff00e8"></button>
-                                </div>
-                
-                                <div class="row2">
-                                    <button id="dark-mode">
-                                        <a class="fa-solid fa-moon"></a>
-                                    </button>
-                                    <button id="font-incre">
-                                        <a >A+</a>
-                                    </button>
-                                    <button id="font-reset">
-                                        <a >A</a>
-                                    </button>
-                                    <button id="font-decre">
-                                        <a >A-</a>
-                                    </button>
                                 </div>
                                 
                             </div>
-                            
                         </div>
-                    </div>
-                </li>
-                <li class="navbar_item icon">
-                    <a class="navbar_btn fa fa-bars"></a>
-                </li>
-                
-            </div>
-        </ul>
-    </div>
+                    </li>
+                    <li class="navbar_item icon">
+                        <a class="navbar_btn fa fa-bars"></a>
+                    </li>
+                    
+                </div>
+            </ul>
+        </div> 
+    </header>
 
     <div class="content">
         <div class="header">
@@ -90,7 +93,7 @@
                 <div class="form-column">
                     <div class="form-row">
                         <div class="control-wrap">
-                            <label for="fistName">First Name</label>
+                            <label for="firstName">First Name</label>
                             <input type="text" name="firstName" id="firstName" />
                             <span class="error" id="fname-error">First Name is required!</span>
                         </div>

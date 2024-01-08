@@ -73,10 +73,12 @@ body {
 }
 
 .search input[type=text]{
+    margin: auto;
+    font-size: medium;
     width: 15rem;
     height: 1.7rem;
     border-radius:10px;
-    border: none;
+    border: 2px solid var(--secondary-color);
 }
 
 .search button:hover {
@@ -85,7 +87,7 @@ body {
 }
 
 .results {
-    margin-left: -5rem;
+    margin-left: -4.5rem;
     background-color: rgba(0, 0, 0, 0.7);
     margin-top: 2rem;
     position: absolute;
@@ -367,6 +369,8 @@ body {
 .event {
     position: relative;
     padding: 10px;
+    max-width: 800px;
+    max-height: 400px;
 }
 
 .overlay {
@@ -397,7 +401,7 @@ body {
 .overlay-text {
     position: absolute;
     width: 75%;
-    top: 5%;
+    top: 10%;
     /* left: 0; */
     right: 0;
     /* bottom: 0; */
@@ -409,6 +413,12 @@ body {
     justify-content: center;   
     transition: all 0.5s ease;
     opacity: 0;
+}
+
+@media screen and (max-width: 1400px) {
+    .overlay-text {
+        top: 5%
+    }
 }
 
 .eventTitle {
@@ -480,6 +490,7 @@ body {
         /* right: 50%; */
         right: -10%;
         /* top: 0; */
+        top: 10%;
     }
 
     @keyframes text-on-event {

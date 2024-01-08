@@ -143,8 +143,16 @@ function validatePhone(phone) {
     if (isEmpty(phone)) {
         return false;
     }
-    var re = /^\d{10}$/;
+    var re = /^\d{11}$/;
     return re.test(phone);
+}
+
+function validateName(name) {
+    if (isEmpty(name)) {
+        return false;
+    }
+    var re = /^[a-zA-Z]+(?:\ [a-zA-Z]+)?/;
+    return re.test(name);
 }
 
 function isEmpty(value) {
@@ -163,19 +171,28 @@ saveBtn.addEventListener("click", function() {
     var phone = document.querySelector("#phone").value;
     var reason = document.querySelector("#reason").value;
 
-    if (isEmpty(firstName) || isEmpty(lastName) || !validateEmail(email) || !validatePhone(phone) || isEmpty(reason)) {
+    if (!validateName(firstName) || !validateName(lastName) || !validateEmail(email) || !validatePhone(phone) || isEmpty(reason)) {
 
-      if (isEmpty(firstName)) {
+      if (!validateName(firstName)) {
           document.querySelector("#firstName").classList.add("error-border");
+          document.querySelector("#fname-error").innerHTML = "First Name is required!";
+          if (!isEmpty(firstName)) {
+            document.querySelector("#fname-error").innerHTML = "Invalid First Name";
+          }
           document.querySelector("#fname-error").style.opacity = "1";
+
       }
       else {
           document.querySelector("#firstName").classList.remove("error-border");
           document.querySelector("#fname-error").style.opacity = "0";
       }
 
-      if (isEmpty(lastName)) {
+      if (!validateName(lastName)) {
           document.querySelector("#lastName").classList.add("error-border");
+          document.querySelector("#lname-error").innerHTML = "Last Name is required!";
+          if (!isEmpty(lastName)) {
+            document.querySelector("#lname-error").innerHTML = "Invalid Last Name";
+          }
           document.querySelector("#lname-error").style.opacity = "1";
       }
       else {
@@ -225,7 +242,7 @@ saveBtn.addEventListener("click", function() {
         localStorage.email = email;
         localStorage.phone = phone;
         localStorage.message = reason;
-        alert("We will reach out to you soon!");
+        alert("We will reach out to you soon, " + localStorage.fname + " !");
         location.reload();
 
     }

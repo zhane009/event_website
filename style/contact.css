@@ -17,6 +17,13 @@ body {
     color: #222;
 }
 
+:root {
+    --primary-color: skyblue;
+    --secondary-color: dodgerblue;
+    --text-color: gainsboro; 
+}
+
+
 .navbar {
     list-style-type: none;
     /* margin: 0 10%; */

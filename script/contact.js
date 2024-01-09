@@ -237,6 +237,7 @@ saveBtn.addEventListener("click", function() {
     }
 
     else {
+        
         localStorage.fname = firstName;
         localStorage.lname = lastName;
         localStorage.email = email;

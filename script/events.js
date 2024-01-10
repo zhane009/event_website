@@ -142,7 +142,7 @@ getEvents().then(data => {
       }
       var id = "event" + (index + 1);
       const container = document.createElement("a");
-      container.href = "eventDetails.html";
+      container.href = "eventDetails.html?event=" + id;
 
       const div = document.createElement("div");
       div.classList.add("event");
@@ -204,15 +204,16 @@ getEvents().then(data => {
   }
 
 
-}).finally(function() {
-  var events = document.querySelectorAll(".event");
-  events.forEach(item => {
-    item.addEventListener("click", function() {
-      var id = item.id;
-      localStorage.eventId = id;
-    })
-  })
-});
+})
+// .finally(function() {
+//   var events = document.querySelectorAll(".event");
+//   events.forEach(item => {
+//     item.addEventListener("mousedown", function() {
+//       var id = item.id;
+//       localStorage.eventId = id;
+//     })
+//   })
+// });
 
 var scrollBtn = document.querySelector("#scroll");
 

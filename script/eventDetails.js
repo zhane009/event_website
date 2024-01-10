@@ -140,9 +140,13 @@ getEvents().then(data => {
   var events = data.details;
   var chosenEvent;
   
+  var url = new URL(window.location.href);
+  var eventId = url.searchParams.get("event");
+  console.log(eventId);
+
   // console.log(localStorage.eventId);
   for (let i = 0; i < events.length; i++) {
-    if (events[i].id == localStorage.eventId) {
+    if (events[i].id == eventId) {
       chosenEvent = events[i];
     }
   };

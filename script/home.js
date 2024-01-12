@@ -145,7 +145,7 @@ getEvents().then(data => {
     const eventArea = document.querySelector(".eventbox .events");
     
     const container = document.createElement("a");
-    container.href = "eventDetails.html";
+    container.href = "eventDetails.html?event=" + id;
     container.id = id;
 
     const div = document.createElement("div");
@@ -178,13 +178,14 @@ getEvents().then(data => {
   }
 
 
-}).finally(() => {
-  var events = document.querySelectorAll(".events a");
-  events.forEach(event => {
-    event.addEventListener("click", function() {
-      var id = event.id;
-      localStorage.eventId = id;
-      console.log(localStorage.eventId);
-    })
-  })
 });
+// .finally(() => {
+//   var events = document.querySelectorAll(".events a");
+//   events.forEach(event => {
+//     event.addEventListener("click", function() {
+//       var id = event.id;
+//       localStorage.eventId = id;
+//       console.log(localStorage.eventId);
+//     })
+//   })
+// });

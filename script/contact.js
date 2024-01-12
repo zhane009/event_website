@@ -143,7 +143,7 @@ function validatePhone(phone) {
     if (isEmpty(phone)) {
         return false;
     }
-    var re = /^\d{11}$/;
+    var re = /^07+\d{9}$/;
     return re.test(phone);
 }
 
@@ -151,7 +151,7 @@ function validateName(name) {
     if (isEmpty(name)) {
         return false;
     }
-    var re = /^[a-zA-Z]+(?:\ [a-zA-Z]+)?/;
+    var re = /^[a-zA-Z]+(?:\[[a-zA-Z]+\])?$/
     return re.test(name);
 }
 
@@ -249,4 +249,4 @@ saveBtn.addEventListener("click", function() {
     }
     
 }   
-);
+); 

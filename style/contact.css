@@ -190,7 +190,7 @@ li a:hover {
 }
 
 @media screen and (max-width: 600px) {
-    * {
+    body {
         font-size: medium;
     }
     
@@ -346,7 +346,7 @@ footer {
 }
 
 
-footer h2 {
+footer h2, h3 {
     /* font-size: 3vh; */
     font-weight: 400;
     line-height: 3rem;

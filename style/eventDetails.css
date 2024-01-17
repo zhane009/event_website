@@ -272,6 +272,10 @@ body {
     margin-block-end: 1rem;
 }
 
+.desc-box h1, .details h1 {
+    color: var(--primary-color)
+}
+
 .info i {
     margin-right: 1.5rem;
 }

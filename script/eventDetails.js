@@ -142,7 +142,6 @@ getEvents().then(data => {
   
   var url = new URL(window.location.href);
   var eventId = url.searchParams.get("event");
-  console.log(eventId);
 
   // console.log(localStorage.eventId);
   for (let i = 0; i < events.length; i++) {

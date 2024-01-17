@@ -17,7 +17,7 @@ darkMode.addEventListener("click", function() {
     document.body.classList.toggle("dark");
 
     if(document.body.classList.contains("dark")) {
-      if (document.title == "Home Page") {
+      if (document.title == "Home") {
         document.querySelector(".background").style.opacity = "0.9";
         document.querySelector(".text-on-background").style.color = "var(--primary-color)";    
       }
@@ -26,7 +26,7 @@ darkMode.addEventListener("click", function() {
     } 
 
     else {
-      if (document.title == "Home Page"){
+      if (document.title == "Home"){
         document.querySelector(".background").style.opacity = "0.5";
         document.querySelector(".text-on-background").style.color = "var(--primary-color)";
       }
@@ -105,14 +105,14 @@ fontReset.addEventListener("click", function() {
 
 if(localStorage.darkMode == "false") {
   document.body.classList.add("dark");
-  if (document.title == "Home Page") {
+  if (document.title == "Home") {
     document.querySelector(".background").style.opacity = "0.9";
     document.querySelector(".text-on-background").style.color = "var(--primary-color)";
   }
   document.querySelector("#dark-mode a").setAttribute("class", "fa-solid fa-sun");
 }
 else {
-  if (document.title == "Home Page") {
+  if (document.title == "Home") {
     document.querySelector(".background").style.opacity = "0.5";
     document.querySelector(".text-on-background").style.color = "var(--primary-color)";
   }
